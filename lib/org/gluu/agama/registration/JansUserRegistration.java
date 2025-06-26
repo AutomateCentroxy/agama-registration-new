@@ -22,8 +22,8 @@ public class JansUserRegistration extends UserRegistration {
     private static final String PASSWORD = "userPassword";
     private static final String INUM_ATTR = "inum";
     private static final String USER_STATUS = "jansStatus";
-    private static final String PHONE = "jansMobile";
-    private static final String COUNTRY = "jansCountry";
+    private static final String PHONE = "telephoneNumber";
+    private static final String COUNTRY = "residenceCountry";
     private static final String REFERRAL = "referralCode";
 
     private static final SecureRandom RAND = new SecureRandom();
