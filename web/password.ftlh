@@ -1,11 +1,15 @@
+[#ftl output_format="HTML"]
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-	<meta charset="UTF-8">
-	<title>Set Password
-	</title>
-  </head>
-  <body>
+<head><meta charset="UTF-8"><title>Set Password
+	</title></head>
+<body>
+
+  
+	
+	
+  
+  
 	<h2>Step 3: Set Your Password
 	</h2>
 	[#if errorMessage??]
@@ -25,5 +29,8 @@
 	  <br>
 	  <button type="submit">Proceed</button>
 	</form>
-  </body>
+  
+</body>
+
+
 </html>
