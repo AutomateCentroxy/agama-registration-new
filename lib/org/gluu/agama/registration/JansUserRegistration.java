@@ -8,6 +8,9 @@ import io.jans.util.StringHelper;
 
 import org.gluu.agama.user.UserRegistration;
 import io.jans.agama.engine.script.LogUtils;
+import org.gluu.agama.sms.OTPService;
+import org.gluu.agama.smtp.EmailService;
+import org.gluu.agama.smtp.jans.model.ContextData;
 
 import java.security.SecureRandom;
 import java.util.*;
@@ -29,8 +32,9 @@ public class JansUserRegistration extends UserRegistration {
     private static final SecureRandom RAND = new SecureRandom();
     private static JansUserRegistration INSTANCE = null;
 
-    private final Map<String, String> smsOtpStore = new HashMap<>();
     private final Map<String, String> emailOtpStore = new HashMap<>();
+    private final OTPService otpService = OTPService.getInstance(new HashMap<>());
+    private final EmailService emailService = EmailService.getInstance();
 
     public JansUserRegistration() {}
 
@@ -57,24 +61,29 @@ public class JansUserRegistration extends UserRegistration {
         return pwd1 != null && pwd1.equals(pwd2);
     }
 
-    public boolean sendSmsOtp(String phoneNumber) {
-        String otp = generateOtp();
-        smsOtpStore.put(phoneNumber, otp);
-        LogUtils.log("Sent SMS OTP % to %", otp, phoneNumber);
-        // Integrate SMS Gateway here
-        return true;
+    public String sendSmsOtp(String username) {
+        return otpService.sendOTPCode(username);
     }
 
-    public boolean validateSmsOtp(String phoneNumber, String otp) {
-        String sentOtp = smsOtpStore.get(phoneNumber);
-        return otp != null && otp.equals(sentOtp);
+    public boolean validateSmsOtp(String username, String otp) {
+        return otpService.validateOTPCode(username, otp);
+    }
+
+    public boolean registerPhone(String username, String phoneNumber) {
+        return otpService.registerPhone(username, phoneNumber);
     }
 
     public boolean sendEmailOtp(String email) {
         String otp = generateOtp();
         emailOtpStore.put(email, otp);
         LogUtils.log("Sent Email OTP % to %", otp, email);
-        // Integrate Email API here
+
+        ContextData context = new ContextData();
+        context.setTimeZone("Asia/Kolkata"); // Set as per your requirement
+        context.setDevice("Web Browser");
+        context.setLocation("India");
+
+        emailService.sendEmail(email, context);
         return true;
     }
 
