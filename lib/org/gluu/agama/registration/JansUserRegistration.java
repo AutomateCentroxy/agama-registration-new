@@ -5,6 +5,7 @@ import io.jans.as.common.service.common.UserService;
 import io.jans.orm.exception.operation.EntryNotFoundException;
 import io.jans.service.cdi.util.CdiUtil;
 import io.jans.util.StringHelper;
+import jans.model.ContextData;
 
 import org.gluu.agama.user.UserRegistration;
 import io.jans.agama.engine.script.LogUtils;
@@ -32,7 +33,8 @@ public class JansUserRegistration extends UserRegistration {
     private final Map<String, String> smsOtpStore = new HashMap<>();
     private final Map<String, String> emailOtpStore = new HashMap<>();
 
-    public JansUserRegistration() {}
+    public JansUserRegistration() {
+    }
 
     public static synchronized JansUserRegistration getInstance() {
         if (INSTANCE == null)
@@ -59,24 +61,64 @@ public class JansUserRegistration extends UserRegistration {
     }
 
     public boolean sendSmsOtp(String phoneNumber) {
-        String otp = generateOtp();
-        smsOtpStore.put(phoneNumber, otp);
-        LogUtils.log("Sent SMS OTP % to %", otp, phoneNumber);
-        // Integrate SMS Gateway here
-        return true;
+        try {
+            LogUtils.log("Sending OTP Code via SMS to %.", phoneNumber);
+
+            String maskedPhone = maskPhone(phoneNumber);
+            String otpCode = generateOtpCode(6);
+
+            LogUtils.log("Generated OTP code is %.", otpCode);
+
+            String message = "Hi, your OTP Code to complete your registration is: " + otpCode;
+            associateOtpWithPhone(phoneNumber, otpCode);
+
+            boolean success = sendTwilioSms(phoneNumber, message);
+
+            if (success) {
+                LogUtils.log("OTP has been successfully sent to % (masked: %).", phoneNumber, maskedPhone);
+            }
+
+            return success;
+        } catch (Exception e) {
+            LogUtils.log("Error while sending OTP via SMS to %: %", phoneNumber, e.getMessage());
+            return false;
+        }
     }
 
-    public boolean validateSmsOtp(String phoneNumber, String otp) {
-        String sentOtp = smsOtpStore.get(phoneNumber);
-        return otp != null && otp.equals(sentOtp);
+    public boolean validateSmsOtp(String phoneNumber, String code) {
+        try {
+            LogUtils.log("Validating OTP code % for phone number %.", code, phoneNumber);
+            String storedCode = smsOtpStore.getOrDefault(phoneNumber, "NULL");
+
+            if (storedCode.equalsIgnoreCase(code)) {
+                smsOtpStore.remove(phoneNumber); // OTP used, remove it
+                return true;
+            }
+
+            return false;
+        } catch (Exception e) {
+            LogUtils.log("Error validating OTP code % for phone %: %", code, phoneNumber, e.getMessage());
+            return false;
+        }
     }
 
     public boolean sendEmailOtp(String email) {
-        String otp = generateOtp();
-        emailOtpStore.put(email, otp);
-        LogUtils.log("Sent Email OTP % to %", otp, email);
-        // Integrate Email API here
-        return true;
+        try {
+            LogUtils.log("Sending OTP to email: %", email);
+
+            ContextData context = new ContextData(); // You can customize this if needed
+            String otp = JansEmailService.getInstance().sendEmail(email, context);
+
+            if (otp != null) {
+                emailOtpStore.put(email, otp); // Save for validation
+                return true;
+            }
+
+            return false;
+        } catch (Exception e) {
+            LogUtils.log("Error sending email OTP to %: %", email, e.getMessage());
+            return false;
+        }
     }
 
     public boolean validateEmailOtp(String email, String otp) {
@@ -85,7 +127,8 @@ public class JansUserRegistration extends UserRegistration {
     }
 
     public String addNewUser(Map<String, String> profile) throws Exception {
-        Set<String> attributes = Set.of("uid", "mail", "displayName", "givenName", "sn", "userPassword", PHONE, COUNTRY, REFERRAL);
+        Set<String> attributes = Set.of("uid", "mail", "displayName", "givenName", "sn", "userPassword", PHONE, COUNTRY,
+                REFERRAL);
 
         User user = new User();
         attributes.forEach(attr -> {
@@ -120,7 +163,8 @@ public class JansUserRegistration extends UserRegistration {
         String ref = fallbackEmail != null ? fallbackEmail : user != null ? user.getUserId() : "unknown";
         LogUtils.log("User lookup for %: %", ref, found ? "FOUND" : "NOT FOUND");
 
-        if (!found) return new HashMap<>();
+        if (!found)
+            return new HashMap<>();
 
         Map<String, String> userMap = new HashMap<>();
         userMap.put(UID, getSingleValuedAttr(user, UID));
@@ -133,7 +177,8 @@ public class JansUserRegistration extends UserRegistration {
     }
 
     private String getSingleValuedAttr(User user, String attribute) {
-        if (user == null) return null;
+        if (user == null)
+            return null;
         if (attribute.equals(UID)) {
             return user.getUserId();
         }
@@ -150,4 +195,44 @@ public class JansUserRegistration extends UserRegistration {
         int otp = 100000 + RAND.nextInt(900000);
         return String.valueOf(otp);
     }
+
+    private String generateOtpCode(int length) {
+        String numbers = "0123456789";
+        SecureRandom random = new SecureRandom();
+        char[] otp = new char[length];
+        for (int i = 0; i < length; i++) {
+            otp[i] = numbers.charAt(random.nextInt(numbers.length()));
+        }
+        return new String(otp);
+    }
+
+    private void associateOtpWithPhone(String phone, String otp) {
+        smsOtpStore.put(phone, otp);
+    }
+
+    private boolean sendTwilioSms(String phoneNumber, String message, Map<String, String> conf) {
+        try {
+            String ACCOUNT_SID = conf.get("ACCOUNT_SID");
+            String AUTH_TOKEN = conf.get("AUTH_TOKEN");
+            String FROM_NUMBER = conf.get("FROM_NUMBER");
+
+            com.twilio.Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+            com.twilio.type.PhoneNumber from = new com.twilio.type.PhoneNumber(FROM_NUMBER);
+            com.twilio.type.PhoneNumber to = new com.twilio.type.PhoneNumber(phoneNumber);
+
+            com.twilio.rest.api.v2010.account.Message.creator(to, from, message).create();
+
+            return true;
+        } catch (Exception e) {
+            LogUtils.log("Failed to send SMS to %: %", phoneNumber, e.getMessage());
+            return false;
+        }
+    }
+
+    private String maskPhone(String phone) {
+        if (phone == null || phone.length() < 4)
+            return "****";
+        return "****" + phone.substring(phone.length() - 4);
+    }
+
 }
