@@ -838,7 +838,14 @@
 					"variableField": "",
 					"valueField": "",
 					"conditionInputField": "",
-					"conditions": [],
+					"conditions": [
+						{
+							"variable": "resendHasSucceed",
+							"operator": "is",
+							"dataValue": "null",
+							"combinator": "none"
+						}
+					],
 					"nodeIcon": "ph:swap",
 					"nodeColor": "",
 					"titleColor": "",
@@ -851,7 +858,8 @@
 			"measured": {
 				"width": 110,
 				"height": 60
-			}
+			},
+			"selected": true
 		}
 	],
 	"edges": [
