@@ -36,6 +36,9 @@ Repeat 6 times max
                     Log "@info OTP validation result is:" otpValidationResult
                     // If otp validation was successful
                     When otpValidationResult is true
+                    Log "@error Invalid code provided. Number of attempt(s): " idx[0]
+                    // Provide feedback to user.
+                    otpUiFeedback.errorMessage = "The provided code is not valid."
                // Log new code request
                Log "@info User has requested a new code."
                // Resend OTP code to user
@@ -57,5 +60,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_lhpbw = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_lhpbw
+it_rlugl = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_rlugl
