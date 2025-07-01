@@ -38,7 +38,7 @@ Repeat 6 times max
                Log "@info User has requested a new code."
                // Resend OTP code to user
                resendHasSucceed = Call otpService sendOTPCode username
-               When 
+               When resendHasSucceed is null
           //  Maximum attempts reached. OTP validation failed!
           Log "@error Maximum attempts reached. OTP validation failed!"
           // OTP validation has failed.
@@ -49,5 +49,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_affha = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_affha
+it_bkugk = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_bkugk
