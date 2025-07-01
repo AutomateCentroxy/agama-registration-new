@@ -19,8 +19,10 @@ Repeat 6 times max
      referral = userInput.referralCode
      // Log collected input from profile.ftlh
      Log "@info Username entered: " userInput.uid
+     // Initialize the JansUserRegistration service with configuration
+     regService = Call org.gluu.agama.registration.JansUserRegistration#getInstance conf
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_bnpyb = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_bnpyb
+it_rwttw = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_rwttw
