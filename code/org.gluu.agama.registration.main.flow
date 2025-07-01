@@ -22,9 +22,9 @@ Repeat 6 times max
      // Initialize the JansUserRegistration service with configuration
      regService = Call org.gluu.agama.registration.JansUserRegistration#getInstance conf
      // Checks if the entered username meets policy rules
-     usernameOk = Call regService usernamePolicyMatch userName
+     isUsernamePolicyMatch = Call regService usernamePolicyMatch userName
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_dyhev = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_dyhev
+it_ldecq = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_ldecq
