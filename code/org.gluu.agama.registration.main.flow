@@ -9,8 +9,10 @@ otpUiFeedback = {}
 otpUiFeedback.infoMessage = "An OTP code has been send to you on your mobile phone."
 // Iterate x times max
 Repeat 6 times max
+     // Retrieve user profile from UI
+     userInput = RRF "profile.ftlh" uiFeedback
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_qrplv = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_qrplv
+it_nkbll = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_nkbll
