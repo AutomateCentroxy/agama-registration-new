@@ -36,12 +36,12 @@ Repeat 6 times max
                // Check if User Exists
                userExists = Call regService checkIfUserExists userName email
           // Invalid SMS OTP
-          Log "@error uiFeedback.errorMessage" = "Invalid SMS OTP"
+          Log "@error uiFeedback.errorMessage = Invalid SMS OTP"
      Otherwise
           // Name should contain only alphabets
           uiFeedback.errorMessage = "Name should contain only alphabets"
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_rjwgv = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_rjwgv
+it_jwrwn = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_jwrwn
