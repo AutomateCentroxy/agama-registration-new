@@ -2,8 +2,11 @@
 Flow org.gluu.agama.registration.main
      Basepath ""
      Timeout 360 seconds
-// Create  variable for UI feedback
+// Declare a variable for UI feedback messages.
 uiFeedback = {}
+otpUiFeedback = {}
+otpUiFeedback.username = username
+otpUiFeedback.infoMessage = "An OTP code has been send to you on your mobile phone."
 // Iterate x times max
 Repeat 6 times max
      // Retrieve user profile  from UI
@@ -36,5 +39,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_lofwb = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_lofwb
+it_hmlzz = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_hmlzz
