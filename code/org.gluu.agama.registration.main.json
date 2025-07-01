@@ -340,9 +340,7 @@
 					"javaVariableName": "",
 					"exceptionVariableField": "",
 					"callType": "Call static method",
-					"arguments": [
-						"conf"
-					],
+					"arguments": [],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
 					"titleColor": "",
@@ -357,7 +355,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "callNode-4a97cfde-7478-4866-82a1-bab616dec16b",
@@ -478,7 +476,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1434,8 +1432,8 @@
 		}
 	],
 	"viewport": {
-		"x": 1159.6800346512487,
-		"y": 1083.2182863469134,
-		"zoom": 0.580754365962861
+		"x": 244.02901733073236,
+		"y": 1561.4055312008525,
+		"zoom": 1.4260257173641406
 	}
 }
