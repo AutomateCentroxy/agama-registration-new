@@ -644,7 +644,14 @@
 					"variableField": "",
 					"valueField": "",
 					"conditionInputField": "",
-					"conditions": [],
+					"conditions": [
+						{
+							"variable": "otpCreds.hasRequestedNewCode",
+							"operator": "is not",
+							"dataValue": "\"yes\"",
+							"combinator": "none"
+						}
+					],
 					"nodeIcon": "ph:swap",
 					"nodeColor": "",
 					"titleColor": "",
@@ -657,7 +664,8 @@
 			"measured": {
 				"width": 110,
 				"height": 60
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "logNode-e5ff28d9-1585-4f19-a6b6-9d90627e9047",
@@ -808,7 +816,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		}
 	],
