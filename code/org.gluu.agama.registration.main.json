@@ -42,8 +42,8 @@
 			"id": "assignmentNode-ee389e10-0b06-40fe-b87b-6985eece6351",
 			"type": "assignmentNode",
 			"position": {
-				"x": -1252.2507505218114,
-				"y": -1177.3546793942546
+				"x": -1251.3407116977305,
+				"y": -1186.4550676350636
 			},
 			"data": {
 				"id": "assignmentNode-ee389e10-0b06-40fe-b87b-6985eece6351",
@@ -91,8 +91,8 @@
 			"id": "repeatNode-61e4d890-d8f9-46d9-8a37-fc3b996113de",
 			"type": "repeatNode",
 			"position": {
-				"x": -924.5045998011797,
-				"y": -1190.313415067275
+				"x": -976.3768127737909,
+				"y": -1186.6732597709515
 			},
 			"data": {
 				"id": "repeatNode-61e4d890-d8f9-46d9-8a37-fc3b996113de",
@@ -125,8 +125,8 @@
 			"id": "logNode-9706dda7-3f9f-43e8-8506-2a5cb6bb30db",
 			"type": "logNode",
 			"position": {
-				"x": -563.8448637144253,
-				"y": -1168.991366586527
+				"x": -723.1016579285827,
+				"y": -1181.7319101236596
 			},
 			"data": {
 				"id": "logNode-9706dda7-3f9f-43e8-8506-2a5cb6bb30db",
@@ -160,8 +160,8 @@
 			"id": "finishNode-32bb5599-5d3c-43d9-99fa-7a08d6e4c5d4",
 			"type": "finishNode",
 			"position": {
-				"x": -193.08148036905055,
-				"y": -1133.3870317529902
+				"x": -488.84409819534267,
+				"y": -1174.3387788366306
 			},
 			"data": {
 				"id": "finishNode-32bb5599-5d3c-43d9-99fa-7a08d6e4c5d4",
@@ -188,7 +188,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1114,6 +1114,42 @@
 				"height": 123
 			},
 			"selected": false
+		},
+		{
+			"id": "rrfNode-94d33f67-b57b-4c9a-954c-c4ee443a7ded",
+			"type": "rrfNode",
+			"position": {
+				"x": -726.3768127737909,
+				"y": -936.6732597709515
+			},
+			"data": {
+				"id": "rrfNode-94d33f67-b57b-4c9a-954c-c4ee443a7ded",
+				"type": "rrfNode",
+				"position": {
+					"x": -726.3768127737909,
+					"y": -936.6732597709515
+				},
+				"previousNodeId": "repeatNode-61e4d890-d8f9-46d9-8a37-fc3b996113de",
+				"branching": "repeat",
+				"agamaData": {
+					"assignments": [],
+					"nodeIcon": "ph:globe-simple",
+					"templatePath": "profile.ftlh",
+					"asssignedVariableName": "userInput",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Retrieve user profile from UI",
+					"arguments": "uiFeedback"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 123
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -1628,11 +1664,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-2c7cbb76-91ee-4c1d-835d-624266b8693a_success"
+		},
+		{
+			"id": "repeatNode-61e4d890-d8f9-46d9-8a37-fc3b996113de-rrfNode-94d33f67-b57b-4c9a-954c-c4ee443a7ded",
+			"type": "default",
+			"source": "repeatNode-61e4d890-d8f9-46d9-8a37-fc3b996113de",
+			"target": "rrfNode-94d33f67-b57b-4c9a-954c-c4ee443a7ded",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "repeat",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_repeatNode-61e4d890-d8f9-46d9-8a37-fc3b996113de_repeat"
 		}
 	],
 	"viewport": {
-		"x": 1060.3400219820217,
-		"y": 808.1612482146332,
-		"zoom": 0.7012496253212007
+		"x": 1448.1691481360383,
+		"y": 1407.6371043957176,
+		"zoom": 1.0988542175768798
 	}
 }
