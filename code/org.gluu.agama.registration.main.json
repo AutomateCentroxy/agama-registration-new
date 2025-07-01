@@ -1461,7 +1461,7 @@
 				},
 				"previousNodeId": "callNode-54c003d5-b0ee-48cf-8eca-52a8cf202174",
 				"agamaData": {
-					"logMessage": "Sent SMS OTP to phone",
+					"logMessage": "\"Sent OTP to phone \"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -1476,7 +1476,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "rrfNode-6808cf46-2c73-4992-8ee9-3a6c2be219c8",
@@ -1511,7 +1511,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -2219,8 +2219,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1029.1445268464938,
-		"y": 1472.1161762436664,
-		"zoom": 1.3491025343396987
+		"x": -188.21653940899296,
+		"y": 1294.4610956571903,
+		"zoom": 1
 	}
 }
