@@ -23,7 +23,7 @@
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "360",
 					"inputs": "",
-					"configs": "",
+					"configs": "conf",
 					"flowname": "org.gluu.agama.registration.main",
 					"displayName": "org.gluu.agama.registration.main",
 					"creationDate": "07/02/2025",
@@ -1706,8 +1706,8 @@
 		}
 	],
 	"viewport": {
-		"x": 2221.3593951493604,
-		"y": 362.90022183240876,
-		"zoom": 2
+		"x": 1473.3545613848682,
+		"y": 281.3589856548507,
+		"zoom": 1.161508731925722
 	}
 }
