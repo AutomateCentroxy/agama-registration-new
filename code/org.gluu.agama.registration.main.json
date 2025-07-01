@@ -1281,6 +1281,46 @@
 				"width": 170,
 				"height": 123
 			},
+			"selected": false
+		},
+		{
+			"id": "callNode-4a97cfde-7478-4866-82a1-bab616dec16b",
+			"type": "callNode",
+			"position": {
+				"x": 270.7711357914808,
+				"y": -932.395182618859
+			},
+			"data": {
+				"id": "callNode-4a97cfde-7478-4866-82a1-bab616dec16b",
+				"type": "callNode",
+				"position": {
+					"x": 270.7711357914808,
+					"y": -932.395182618859
+				},
+				"previousNodeId": "callNode-bdab6ac9-e9de-45ea-acf8-bd0c49969c33",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "usernamePolicyMatch",
+					"javaVariableName": "regService",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"arguments": [
+						"userName"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Validate Username Policy",
+					"hasComment": true,
+					"comment": "Checks if the entered username meets policy rules",
+					"asssignedVariableName": "usernameOk"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 123
+			},
 			"selected": true
 		}
 	],
@@ -1872,11 +1912,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-8bb289f2-b702-4175-9eea-9b51dc146da2"
+		},
+		{
+			"id": "callNode-bdab6ac9-e9de-45ea-acf8-bd0c49969c33-callNode-4a97cfde-7478-4866-82a1-bab616dec16b",
+			"type": "default",
+			"source": "callNode-bdab6ac9-e9de-45ea-acf8-bd0c49969c33",
+			"target": "callNode-4a97cfde-7478-4866-82a1-bab616dec16b",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_callNode-bdab6ac9-e9de-45ea-acf8-bd0c49969c33"
 		}
 	],
 	"viewport": {
-		"x": 465.88412005140856,
-		"y": 1576.6618082797158,
-		"zoom": 1.276328768828953
+		"x": 433.29447353693183,
+		"y": 1743.7687249069472,
+		"zoom": 1.4824670098028352
 	}
 }
