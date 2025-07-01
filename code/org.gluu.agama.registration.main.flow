@@ -17,8 +17,9 @@ Repeat 6 times max
      phone = userInput.jansMobile
      country = userInput.country
      referral = userInput.referralCode
+     Log "@info " Log("Received user input: " + userName + ", " + email + ", " + phone)
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_pcuqa = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_pcuqa
+it_unuuq = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_unuuq
