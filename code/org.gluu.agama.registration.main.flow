@@ -39,6 +39,8 @@ Repeat 6 times max
                When userExists is true
                     // Password Input Page
                     pwdInput = RRF "password.ftlh" uiFeedback
+                    // Prompt user to enter and confirm password, validate both match and policy compliance.
+                    passwordAttempts = Repeat 2 times max
                Log "@error uiFeedback.errorMessage = User already exists"
           // Invalid SMS OTP
           Log "@error uiFeedback.errorMessage = Invalid SMS OTP"
@@ -48,5 +50,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_aycnb = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_aycnb
+it_paydc = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_paydc
