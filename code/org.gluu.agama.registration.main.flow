@@ -18,9 +18,9 @@ Repeat 6 times max
      country = userInput.country
      referral = userInput.referralCode
      // Log collected input from profile.ftlh
-     Log "@info " Received user input: username email phone
+     Log "@info Username entered: " userInput.uid
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_rmklz = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_rmklz
+it_bnpyb = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_bnpyb
