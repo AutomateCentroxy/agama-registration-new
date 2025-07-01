@@ -13,6 +13,7 @@ import io.jans.agama.engine.script.LogUtils;
 import java.security.SecureRandom;
 import java.util.*;
 import java.util.regex.Pattern;
+import static org.gluu.agama.registration.jans.Attrs.*;
 
 public class JansUserRegistration extends UserRegistration {
 
@@ -48,8 +49,10 @@ public class JansUserRegistration extends UserRegistration {
     }
 
     public boolean usernamePolicyMatch(String userName) {
+        // Regex: Only alphabets (uppercase and lowercase), minimum 1 character
         String regex = '''^[A-Za-z]+$''';
-        return Pattern.compile(regex).matcher(userName).matches();
+        Pattern pattern = Pattern.compile(regex);
+        return pattern.matcher(userName).matches();
     }
 
     public boolean checkIfUserExists(String username, String email) {
