@@ -355,7 +355,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "callNode-4a97cfde-7478-4866-82a1-bab616dec16b",
@@ -418,7 +418,7 @@
 					"conditionInputField": "",
 					"conditions": [
 						{
-							"variable": "usernamePolicyMatch",
+							"variable": "isUsernamePolicyMatch",
 							"operator": "is",
 							"dataValue": "true",
 							"combinator": "none"
@@ -437,7 +437,7 @@
 				"width": 109,
 				"height": 58
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "assignmentNode-65e10988-eaa6-45a4-90e8-3d483edf731d",
@@ -1432,8 +1432,8 @@
 		}
 	],
 	"viewport": {
-		"x": 244.02901733073236,
-		"y": 1561.4055312008525,
-		"zoom": 1.4260257173641406
+		"x": -37.749015375762156,
+		"y": 1400.5879898176713,
+		"zoom": 1.0570180405613803
 	}
 }
