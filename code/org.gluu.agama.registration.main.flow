@@ -36,6 +36,8 @@ Repeat 6 times max
                     Log "@info OTP validation result is:" otpValidationResult
                     // If otp validation was successful
                     When otpValidationResult is true
+                         // OTP flow completed successfully.
+                         Finish otpValidationResult
                     Log "@error Invalid code provided. Number of attempt(s): " idx[0]
                     // Provide feedback to user.
                     otpUiFeedback.errorMessage = "The provided code is not valid."
@@ -60,5 +62,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_rlugl = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_rlugl
+it_cdqik = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_cdqik
