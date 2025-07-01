@@ -46,7 +46,8 @@ public class JansUserRegistration extends UserRegistration {
     }
 
     public boolean usernamePolicyMatch(String userName) {
-        return Pattern.compile("^[A-Za-z]+$").matcher(userName).matches();
+        String regex = '''^[A-Za-z]+$''';
+        return Pattern.compile(regex).matcher(userName).matches();
     }
 
     public boolean checkIfUserExists(String username, String email) {
