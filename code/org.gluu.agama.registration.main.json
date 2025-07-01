@@ -692,7 +692,7 @@
 				"previousNodeId": "whenNode-636ac8ad-af90-4710-bf23-ac5cd3cb37a0",
 				"branching": "continue",
 				"agamaData": {
-					"logMessage": "uiFeedback.errorMessage = \"Invalid SMS OTP\"",
+					"logMessage": "\"uiFeedback.errorMessage\" = \"Invalid SMS OTP\"",
 					"logLevel": "error",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
