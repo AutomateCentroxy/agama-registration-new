@@ -1,21 +1,31 @@
+[#ftl output_format="HTML"]
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Verify SMS OTP</title>
-</head>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Set Password</title></head>
 <body>
-<h2>Step 2: Verify SMS OTP</h2>
+
+
+    
+    
+
+
+<h2>Step 3: Set Your Password</h2>
 
 [#if errorMessage??]
     <p style="color:red;">${errorMessage}</p>
 [/#if]
 
 <form method="post">
-    <label>Enter the OTP sent to your phone:</label><br>
-    <input type="text" name="otp" required><br><br>
+    <label>Password:</label><br>
+    <input type="password" name="userPassword" required=""><br><br>
 
-    <button type="submit">Verify</button>
+    <label>Confirm Password:</label><br>
+    <input type="password" name="confirmPassword" required=""><br><br>
+
+    <button type="submit">Proceed</button>
 </form>
+
 </body>
+
+
 </html>
