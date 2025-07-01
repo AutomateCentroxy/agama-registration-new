@@ -1119,8 +1119,8 @@
 			"id": "rrfNode-94d33f67-b57b-4c9a-954c-c4ee443a7ded",
 			"type": "rrfNode",
 			"position": {
-				"x": -726.3768127737909,
-				"y": -936.6732597709515
+				"x": -729.2288642085192,
+				"y": -932.395182618859
 			},
 			"data": {
 				"id": "rrfNode-94d33f67-b57b-4c9a-954c-c4ee443a7ded",
@@ -1143,6 +1143,65 @@
 					"hasComment": true,
 					"comment": "Retrieve user profile from UI",
 					"arguments": "uiFeedback"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 123
+			},
+			"selected": false,
+			"dragging": false
+		},
+		{
+			"id": "assignmentNode-39aa820a-bc91-43ce-b77b-f1cd243c8153",
+			"type": "assignmentNode",
+			"position": {
+				"x": -479.2288642085192,
+				"y": -932.395182618859
+			},
+			"data": {
+				"id": "assignmentNode-39aa820a-bc91-43ce-b77b-f1cd243c8153",
+				"type": "assignmentNode",
+				"position": {
+					"x": -479.2288642085192,
+					"y": -932.395182618859
+				},
+				"previousNodeId": "rrfNode-94d33f67-b57b-4c9a-954c-c4ee443a7ded",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "userInput.uid",
+							"assignedVariableName": "userName"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "userInput.mail",
+							"assignedVariableName": "email"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "userInput.jansMobile",
+							"assignedVariableName": "phone"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "userInput.country",
+							"assignedVariableName": "country"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "userInput.referralCode",
+							"assignedVariableName": "referral"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Take input from user",
+					"hasComment": true,
+					"comment": "Getting all data from user"
 				}
 			},
 			"measured": {
@@ -1683,11 +1742,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_repeatNode-61e4d890-d8f9-46d9-8a37-fc3b996113de_repeat"
+		},
+		{
+			"id": "rrfNode-94d33f67-b57b-4c9a-954c-c4ee443a7ded-assignmentNode-39aa820a-bc91-43ce-b77b-f1cd243c8153",
+			"type": "default",
+			"source": "rrfNode-94d33f67-b57b-4c9a-954c-c4ee443a7ded",
+			"target": "assignmentNode-39aa820a-bc91-43ce-b77b-f1cd243c8153",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_rrfNode-94d33f67-b57b-4c9a-954c-c4ee443a7ded"
 		}
 	],
 	"viewport": {
-		"x": 1448.1691481360383,
-		"y": 1407.6371043957176,
-		"zoom": 1.0988542175768798
+		"x": 1372.7574860374648,
+		"y": 1676.0119016490435,
+		"zoom": 1.276328768828953
 	}
 }
