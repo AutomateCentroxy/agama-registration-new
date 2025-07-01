@@ -786,7 +786,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -864,6 +864,40 @@
 				"height": 123
 			},
 			"selected": false,
+			"dragging": false
+		},
+		{
+			"id": "repeatNode-113ccc4e-67b5-47ad-9985-09fb5b7c3f79",
+			"type": "repeatNode",
+			"position": {
+				"x": 2731.3081187071903,
+				"y": -306.29893297923843
+			},
+			"data": {
+				"id": "repeatNode-113ccc4e-67b5-47ad-9985-09fb5b7c3f79",
+				"type": "repeatNode",
+				"position": {
+					"x": 2712.0427320513145,
+					"y": -307.78088579892113
+				},
+				"previousNodeId": "rrfNode-f3a697b3-f553-44a7-83b3-dc6083a6a8b9",
+				"agamaData": {
+					"nodeIcon": "material-symbols:event-repeat-outline-rounded",
+					"maxIteration": "2",
+					"maxIterationVariableName": "passwordAttempts",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Password Confirmation",
+					"hasComment": true,
+					"comment": "Prompt user to enter and confirm password, validate both match and policy compliance."
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 123
+			},
+			"selected": true,
 			"dragging": false
 		}
 	],
@@ -1263,11 +1297,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-ecf35dc8-83bd-4cb9-864b-35b3d2e6b2a6_continue"
+		},
+		{
+			"id": "rrfNode-f3a697b3-f553-44a7-83b3-dc6083a6a8b9-repeatNode-113ccc4e-67b5-47ad-9985-09fb5b7c3f79",
+			"type": "default",
+			"source": "rrfNode-f3a697b3-f553-44a7-83b3-dc6083a6a8b9",
+			"target": "repeatNode-113ccc4e-67b5-47ad-9985-09fb5b7c3f79",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_rrfNode-f3a697b3-f553-44a7-83b3-dc6083a6a8b9"
 		}
 	],
 	"viewport": {
-		"x": -3035.4038390300016,
-		"y": 876.9281058818574,
-		"zoom": 1.349570629669716
+		"x": -3656.7199682603423,
+		"y": 779.7201731639757,
+		"zoom": 1.56753807071187
 	}
 }
