@@ -27,11 +27,13 @@ Repeat 6 times max
      When usernamePolicyMatch is true
           // Send SMS OTP to user's mobile and get masked version for UI feedback
           maskedPhone = Call regService sendSmsOtp phone
+          Log "@info " Sent SMS OTP to phone
+          smsInput = RRF "verifysms.ftlh" uiFeedback
      Otherwise
           // Name should contain only alphabets
           uiFeedback.errorMessage = "Name should contain only alphabets"
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_uuosn = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_uuosn
+it_tpgjd = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_tpgjd
