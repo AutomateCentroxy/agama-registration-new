@@ -1314,7 +1314,7 @@
 					"displayName": "Validate Username Policy",
 					"hasComment": true,
 					"comment": "Checks if the entered username meets policy rules",
-					"asssignedVariableName": "usernameOk"
+					"asssignedVariableName": "isUsernamePolicyMatch"
 				}
 			},
 			"measured": {
@@ -1934,8 +1934,8 @@
 		}
 	],
 	"viewport": {
-		"x": 433.29447353693183,
-		"y": 1743.7687249069472,
-		"zoom": 1.4824670098028352
+		"x": 878.9189958796053,
+		"y": 1397.944795939885,
+		"zoom": 1.276328768828953
 	}
 }
