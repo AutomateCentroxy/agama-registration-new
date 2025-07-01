@@ -5,7 +5,7 @@ import io.jans.as.common.service.common.UserService;
 import io.jans.orm.exception.operation.EntryNotFoundException;
 import io.jans.service.cdi.util.CdiUtil;
 import io.jans.util.StringHelper;
-import jans.model.ContextData;
+import org.gluu.agama.registration.jans.model.ContextData;
 
 import org.gluu.agama.user.UserRegistration;
 import io.jans.agama.engine.script.LogUtils;
