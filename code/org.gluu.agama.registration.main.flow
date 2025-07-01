@@ -11,8 +11,14 @@ otpUiFeedback.infoMessage = "An OTP code has been send to you on your mobile pho
 Repeat 6 times max
      // Retrieve user profile from UI
      userInput = RRF "profile.ftlh" uiFeedback
+     // Getting all data from user
+     userName = userInput.uid
+     email = userInput.mail
+     phone = userInput.jansMobile
+     country = userInput.country
+     referral = userInput.referralCode
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_nkbll = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_nkbll
+it_pcuqa = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_pcuqa
