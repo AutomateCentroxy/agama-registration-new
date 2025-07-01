@@ -257,7 +257,7 @@
 						},
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "userInput.telephoneNumber",
+							"assignmentExpression": "userInput.jansMobile",
 							"assignedVariableName": "phoneNumber"
 						},
 						{
@@ -284,7 +284,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1706,8 +1706,8 @@
 		}
 	],
 	"viewport": {
-		"x": 0,
-		"y": 0,
-		"zoom": 1
+		"x": 334.34974728714946,
+		"y": 104.07347141392628,
+		"zoom": 1.5669943738986813
 	}
 }
