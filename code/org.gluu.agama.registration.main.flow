@@ -29,13 +29,19 @@ Repeat 6 times max
           maskedPhone = Call regService sendSmsOtp phone
           Log "@info Sent OTP to phone "
           smsInput = RRF "verifysms.ftlh" uiFeedback
-          // Validate SMS OTP
-          smsOtpOk = Call regService validateSmsOtp phone smsInput.code
+          // Try collecting the OTP code from the UI for maximum x(3) times.
+          y = Repeat 3 times max
+               // Validate the OTP code provided by the user.
+               smsOtpOk = Call regService validateSmsOtp phone smsInput.code
+          //  Maximum attempts reached. OTP validation failed!
+          Log "@error Maximum attempts reached. OTP validation failed!"
+          // OTP validation has failed.
+          Finish otpValidationResult
      Otherwise
           // Name should contain only alphabets
           uiFeedback.errorMessage = "Name should contain only alphabets"
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_hswoi = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_hswoi
+it_chyvh = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_chyvh
