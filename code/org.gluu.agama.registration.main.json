@@ -59,22 +59,37 @@
 							"variableTypeCheck": false,
 							"assignmentExpression": "{}",
 							"assignedVariableName": "uiFeedback"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "{}",
+							"assignedVariableName": "otpUiFeedback"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "username",
+							"assignedVariableName": "otpUiFeedback.username"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "\"An OTP code has been send to you on your mobile phone.\"",
+							"assignedVariableName": "otpUiFeedback.infoMessage"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "Declare feedback Variable",
 					"hasComment": true,
-					"comment": "Create  variable for UI feedback"
+					"comment": "Declare a variable for UI feedback messages."
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 123
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -608,7 +623,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -898,8 +913,8 @@
 		}
 	],
 	"viewport": {
-		"x": -687.4691256864289,
-		"y": -7.6588980274676715,
-		"zoom": 1
+		"x": 1331.862649730347,
+		"y": 257.0208410211099,
+		"zoom": 1.3491025343396987
 	}
 }
