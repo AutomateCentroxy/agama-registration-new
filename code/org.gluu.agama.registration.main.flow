@@ -24,7 +24,7 @@ Repeat 6 times max
      // Checks if the entered username meets policy rules
      isUsernamePolicyMatch = Call regService usernamePolicyMatch userName
      // if username policy match
-     When usernamePolicyMatch is true
+     When isUsernamePolicyMatch is true
           // Send SMS OTP to user's mobile and get masked version for UI feedback
           maskedPhone = Call regService sendSmsOtp phone
           Log "@info Sent OTP to phone "
@@ -53,5 +53,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_jrlfl = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_jrlfl
+it_ucgpp = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_ucgpp
