@@ -897,8 +897,42 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
+		},
+		{
+			"id": "logNode-238cb47e-3aa0-470e-b03a-7044d881ed47",
+			"type": "logNode",
+			"position": {
+				"x": 2981.3081187071903,
+				"y": -306.29893297923843
+			},
+			"data": {
+				"id": "logNode-238cb47e-3aa0-470e-b03a-7044d881ed47",
+				"type": "logNode",
+				"position": {
+					"x": 2981.3081187071903,
+					"y": -306.29893297923843
+				},
+				"previousNodeId": "repeatNode-113ccc4e-67b5-47ad-9985-09fb5b7c3f79",
+				"branching": "continue",
+				"agamaData": {
+					"logMessage": "\"Password validation failed\"",
+					"logLevel": "error",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Password validation failed",
+					"hasComment": true,
+					"comment": "Password validation failed"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 123
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -1316,6 +1350,25 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_rrfNode-f3a697b3-f553-44a7-83b3-dc6083a6a8b9"
+		},
+		{
+			"id": "repeatNode-113ccc4e-67b5-47ad-9985-09fb5b7c3f79-logNode-238cb47e-3aa0-470e-b03a-7044d881ed47",
+			"type": "default",
+			"source": "repeatNode-113ccc4e-67b5-47ad-9985-09fb5b7c3f79",
+			"target": "logNode-238cb47e-3aa0-470e-b03a-7044d881ed47",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "continue",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_repeatNode-113ccc4e-67b5-47ad-9985-09fb5b7c3f79_continue"
 		}
 	],
 	"viewport": {
