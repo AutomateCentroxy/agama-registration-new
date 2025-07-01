@@ -35,10 +35,11 @@ Repeat 6 times max
           When smsOtpOk is false
                // Check if User Exists
                userExists = Call regService checkIfUserExists userName email
-               // If User Already Exists
-               Quit When userExists is true
-               // Password Input Page
-               pwdInput = RRF "password.ftlh" uiFeedback
+               // When userExists is true
+               When userExists is true
+                    // Password Input Page
+                    pwdInput = RRF "password.ftlh" uiFeedback
+               Log "@error uiFeedback.errorMessage = User already exists"
           // Invalid SMS OTP
           Log "@error uiFeedback.errorMessage = Invalid SMS OTP"
      Otherwise
@@ -47,5 +48,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_kyyml = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_kyyml
+it_aycnb = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_aycnb
