@@ -41,7 +41,7 @@ public class JansUserRegistration extends UserRegistration {
     }
 
     public boolean passwordPolicyMatch(String userPassword) {
-        String regex = "^(?=.*[!@#$^&*])[A-Za-z0-9!@#$^&*]{6,}$";
+        String regex = "^(?=.*[!@#$&*]{6,}$";
         return Pattern.compile(regex).matcher(userPassword).matches();
     }
 
