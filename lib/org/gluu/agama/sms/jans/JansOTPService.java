@@ -24,7 +24,7 @@ public class JansOTPService extends OTPService {
     private HashMap<String, String> flowConfig;
     private static UserService userService = CdiUtil.bean(UserService.class);
     private static final String USERNAME = "uid";
-    private static final String PHONE = "telephoneNumber";
+    private static final String PHONE = "jansMobile";
     private static final String MOBILE = "mobile";
 
     public static final int OTP_CODE_LENGTH = 6;
