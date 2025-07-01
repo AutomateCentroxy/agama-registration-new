@@ -18,7 +18,7 @@ Repeat 6 times max
      country = userInput.country
      referral = userInput.referralCode
      // Log collected input from profile.ftlh
-     Log "@info Username entered: " userInput.uid
+     Log "@info Username entered: " userInput.uid userInput.mail userInput.jansMobile userInput.country userInput.referralCode
      // Initialize the JansUserRegistration service with configuration
      regService = Call org.gluu.agama.registration.JansUserRegistration#getInstance conf
      // Checks if the entered username meets policy rules
@@ -53,5 +53,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_pprpl = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_pprpl
+it_mprfw = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_mprfw
