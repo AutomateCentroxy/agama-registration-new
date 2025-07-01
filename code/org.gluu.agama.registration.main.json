@@ -1443,6 +1443,74 @@
 				"width": 170,
 				"height": 123
 			},
+			"selected": false
+		},
+		{
+			"id": "logNode-482f2c96-a02c-4d04-8675-679481404672",
+			"type": "logNode",
+			"position": {
+				"x": 1020.7711357914808,
+				"y": -732.395182618859
+			},
+			"data": {
+				"id": "logNode-482f2c96-a02c-4d04-8675-679481404672",
+				"type": "logNode",
+				"position": {
+					"x": 1020.7711357914808,
+					"y": -732.395182618859
+				},
+				"previousNodeId": "callNode-54c003d5-b0ee-48cf-8eca-52a8cf202174",
+				"agamaData": {
+					"logMessage": "Sent SMS OTP to phone",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": " SMS Sent",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 123
+			},
+			"selected": false
+		},
+		{
+			"id": "rrfNode-6808cf46-2c73-4992-8ee9-3a6c2be219c8",
+			"type": "rrfNode",
+			"position": {
+				"x": 1270.771135791481,
+				"y": -732.395182618859
+			},
+			"data": {
+				"id": "rrfNode-6808cf46-2c73-4992-8ee9-3a6c2be219c8",
+				"type": "rrfNode",
+				"position": {
+					"x": 1270.771135791481,
+					"y": -732.395182618859
+				},
+				"previousNodeId": "logNode-482f2c96-a02c-4d04-8675-679481404672",
+				"agamaData": {
+					"assignments": [],
+					"nodeIcon": "ph:globe-simple",
+					"templatePath": "verifysms.ftlh",
+					"asssignedVariableName": "smsInput",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "SMS UI page",
+					"hasComment": true,
+					"comment": "",
+					"arguments": "uiFeedback"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 123
+			},
 			"selected": true
 		}
 	],
@@ -2110,11 +2178,49 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-2cdd693f-564f-484d-9c50-ee74e922d4f1_success"
+		},
+		{
+			"id": "callNode-54c003d5-b0ee-48cf-8eca-52a8cf202174-logNode-482f2c96-a02c-4d04-8675-679481404672",
+			"type": "default",
+			"source": "callNode-54c003d5-b0ee-48cf-8eca-52a8cf202174",
+			"target": "logNode-482f2c96-a02c-4d04-8675-679481404672",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_callNode-54c003d5-b0ee-48cf-8eca-52a8cf202174"
+		},
+		{
+			"id": "logNode-482f2c96-a02c-4d04-8675-679481404672-rrfNode-6808cf46-2c73-4992-8ee9-3a6c2be219c8",
+			"type": "default",
+			"source": "logNode-482f2c96-a02c-4d04-8675-679481404672",
+			"target": "rrfNode-6808cf46-2c73-4992-8ee9-3a6c2be219c8",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-482f2c96-a02c-4d04-8675-679481404672"
 		}
 	],
 	"viewport": {
-		"x": -76.32271007452664,
-		"y": 1224.5953584551564,
-		"zoom": 1
+		"x": -1029.1445268464938,
+		"y": 1472.1161762436664,
+		"zoom": 1.3491025343396987
 	}
 }
