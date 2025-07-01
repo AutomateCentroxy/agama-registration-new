@@ -1226,20 +1226,20 @@
 				},
 				"previousNodeId": "assignmentNode-39aa820a-bc91-43ce-b77b-f1cd243c8153",
 				"agamaData": {
-					"logMessage": "Log(\"Received user input: \" + userName + \", \" + email + \", \" + phone)",
+					"logMessage": "Received user input: username=% email=% phone=%",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "Input check",
+					"displayName": "Log User Input",
 					"hasComment": true,
-					"comment": ""
+					"comment": "Log collected input from profile.ftlh"
 				}
 			},
 			"measured": {
-				"width": 170,
-				"height": 123
+				"width": 168,
+				"height": 120
 			},
 			"selected": true
 		}
@@ -1816,8 +1816,8 @@
 		}
 	],
 	"viewport": {
-		"x": 929.1116928095364,
-		"y": 1683.912557112218,
-		"zoom": 1.4260257173641406
+		"x": 1114.603648911897,
+		"y": 1546.0253906210633,
+		"zoom": 1.276328768828953
 	}
 }
