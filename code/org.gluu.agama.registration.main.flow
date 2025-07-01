@@ -61,5 +61,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_wmotg = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_wmotg
+it_xokil = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_xokil
