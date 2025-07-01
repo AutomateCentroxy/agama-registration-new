@@ -692,7 +692,7 @@
 				"previousNodeId": "whenNode-636ac8ad-af90-4710-bf23-ac5cd3cb37a0",
 				"branching": "continue",
 				"agamaData": {
-					"logMessage": "uiFeedback.errorMessage = \"Invalid SMS OTP\"",
+					"logMessage": "uiFeedback.errorMessage: \"Invalid SMS OTP\"",
 					"logLevel": "error",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -707,7 +707,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -750,7 +750,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -1096,8 +1096,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1873.7860601111788,
-		"y": 1143.9008152969043,
+		"x": -1863.2879925360066,
+		"y": 1141.9627105137956,
 		"zoom": 1.1619117382201656
 	}
 }
