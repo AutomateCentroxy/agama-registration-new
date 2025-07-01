@@ -29,6 +29,11 @@ Repeat 6 times max
                otpCreds = RRF "verifysms.ftlh" otpUiFeedback
                // Add log entry with collected code in log file.
                Log "@info Information provided by the user is : " otpCreds
+               When 
+                    Call __________#__________ 
+                    Log "@ " __________
+               Log "@ " __________
+               Call __________#__________ 
           //  Maximum attempts reached. OTP validation failed!
           Log "@error Maximum attempts reached. OTP validation failed!"
           // OTP validation has failed.
@@ -39,5 +44,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_hmlzz = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_hmlzz
+it_gcepp = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_gcepp
