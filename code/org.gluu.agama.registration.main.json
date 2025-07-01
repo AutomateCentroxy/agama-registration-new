@@ -1476,7 +1476,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "rrfNode-6808cf46-2c73-4992-8ee9-3a6c2be219c8",
@@ -1512,6 +1512,47 @@
 				"height": 123
 			},
 			"selected": false
+		},
+		{
+			"id": "callNode-1934c8b7-9fd2-4e75-8856-d1c241406c43",
+			"type": "callNode",
+			"position": {
+				"x": 1520.771135791481,
+				"y": -732.395182618859
+			},
+			"data": {
+				"id": "callNode-1934c8b7-9fd2-4e75-8856-d1c241406c43",
+				"type": "callNode",
+				"position": {
+					"x": 1520.771135791481,
+					"y": -732.395182618859
+				},
+				"previousNodeId": "rrfNode-6808cf46-2c73-4992-8ee9-3a6c2be219c8",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "validateSmsOtp",
+					"javaVariableName": "regService",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"arguments": [
+						"phone",
+						"smsInput.code"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Validate SMS OTP",
+					"hasComment": true,
+					"comment": "Validate SMS OTP",
+					"asssignedVariableName": "smsOtpOk"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 123
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -2216,11 +2257,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-482f2c96-a02c-4d04-8675-679481404672"
+		},
+		{
+			"id": "rrfNode-6808cf46-2c73-4992-8ee9-3a6c2be219c8-callNode-1934c8b7-9fd2-4e75-8856-d1c241406c43",
+			"type": "default",
+			"source": "rrfNode-6808cf46-2c73-4992-8ee9-3a6c2be219c8",
+			"target": "callNode-1934c8b7-9fd2-4e75-8856-d1c241406c43",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_rrfNode-6808cf46-2c73-4992-8ee9-3a6c2be219c8"
 		}
 	],
 	"viewport": {
-		"x": -188.21653940899296,
-		"y": 1294.4610956571903,
-		"zoom": 1
+		"x": -1168.2993076030766,
+		"y": 1353.4261481212484,
+		"zoom": 1.3491025343396987
 	}
 }
