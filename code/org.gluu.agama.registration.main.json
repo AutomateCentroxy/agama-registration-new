@@ -1048,6 +1048,78 @@
 				"width": 110,
 				"height": 60
 			},
+			"selected": false
+		},
+		{
+			"id": "logNode-66f84968-f222-4dc5-9358-27dcdf83f6c4",
+			"type": "logNode",
+			"position": {
+				"x": 2446.4992625149443,
+				"y": 875.1129803781213
+			},
+			"data": {
+				"id": "logNode-66f84968-f222-4dc5-9358-27dcdf83f6c4",
+				"type": "logNode",
+				"position": {
+					"x": 2446.4992625149443,
+					"y": 875.1129803781213
+				},
+				"previousNodeId": "whenNode-2c7cbb76-91ee-4c1d-835d-624266b8693a",
+				"branching": "continue",
+				"agamaData": {
+					"logMessage": "\"Invalid code provided. Number of attempt(s): \" idx[0]",
+					"logLevel": "error",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Log invalid code",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false
+		},
+		{
+			"id": "assignmentNode-58984ce4-9fc1-4e10-ac5b-8b59d0ba2b97",
+			"type": "assignmentNode",
+			"position": {
+				"x": 2696.4992625149443,
+				"y": 875.1129803781213
+			},
+			"data": {
+				"id": "assignmentNode-58984ce4-9fc1-4e10-ac5b-8b59d0ba2b97",
+				"type": "assignmentNode",
+				"position": {
+					"x": 2696.4992625149443,
+					"y": 875.1129803781213
+				},
+				"previousNodeId": "logNode-66f84968-f222-4dc5-9358-27dcdf83f6c4",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "\"The provided code is not valid.\"",
+							"assignedVariableName": "otpUiFeedback.errorMessage"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Provide feedback",
+					"hasComment": true,
+					"comment": "Provide feedback to user."
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		}
 	],
@@ -1544,6 +1616,44 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-da5b7ca6-4c71-4823-9ad9-2bd9ae73359c"
+		},
+		{
+			"id": "whenNode-2c7cbb76-91ee-4c1d-835d-624266b8693a-logNode-66f84968-f222-4dc5-9358-27dcdf83f6c4",
+			"type": "default",
+			"source": "whenNode-2c7cbb76-91ee-4c1d-835d-624266b8693a",
+			"target": "logNode-66f84968-f222-4dc5-9358-27dcdf83f6c4",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "continue",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-2c7cbb76-91ee-4c1d-835d-624266b8693a_continue"
+		},
+		{
+			"id": "logNode-66f84968-f222-4dc5-9358-27dcdf83f6c4-assignmentNode-58984ce4-9fc1-4e10-ac5b-8b59d0ba2b97",
+			"type": "default",
+			"source": "logNode-66f84968-f222-4dc5-9358-27dcdf83f6c4",
+			"target": "assignmentNode-58984ce4-9fc1-4e10-ac5b-8b59d0ba2b97",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-66f84968-f222-4dc5-9358-27dcdf83f6c4"
 		}
 	],
 	"viewport": {
