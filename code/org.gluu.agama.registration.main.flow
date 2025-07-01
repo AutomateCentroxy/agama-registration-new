@@ -30,10 +30,14 @@ Repeat 6 times max
                // Add log entry with collected code in log file.
                Log "@info Information provided by the user is : " otpCreds
                When 
-                    Call __________#__________ 
-                    Log "@ " __________
-               Log "@ " __________
-               Call __________#__________ 
+                    // Validate the OTP code provided by the user.
+                    otpValidationResult = Call otpService validateOTPCode username otpCreds.code
+                    // Add log entry withvalidation result in log file.
+                    Log "@info OTP validation result is:" otpValidationResult
+               // Log new code request
+               Log "@info User has requested a new code."
+               // Resend OTP code to user
+               resendHasSucceed = Call otpService sendOTPCode username
           //  Maximum attempts reached. OTP validation failed!
           Log "@error Maximum attempts reached. OTP validation failed!"
           // OTP validation has failed.
@@ -44,5 +48,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_gcepp = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_gcepp
+it_owmgs = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_owmgs
