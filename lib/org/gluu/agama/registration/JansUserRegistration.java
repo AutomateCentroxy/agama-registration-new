@@ -213,7 +213,7 @@ public class JansUserRegistration extends UserRegistration {
             // Fallback credentials — replace with your real credentials
             String fallbackSid = "REPLACE_WITH_VALID_SID";
             String fallbackToken = "REPLACE_WITH_VALID_AUTH_TOKEN";
-            String fallbackFrom = "+1234567890"; // REPLACE with your verified Twilio number
+            String fallbackFrom = "TWILIO_FROM_NUMBER"; // REPLACE with your verified Twilio number
 
             String ACCOUNT_SID = (conf != null && StringHelper.isNotEmpty(conf.get("ACCOUNT_SID")))
                     ? conf.get("ACCOUNT_SID") : fallbackSid;
