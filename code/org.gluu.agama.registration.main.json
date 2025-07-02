@@ -1052,8 +1052,8 @@
 			"id": "logNode-19b10cd4-e5a9-41c3-a3b4-7c224e326af4",
 			"type": "logNode",
 			"position": {
-				"x": 2378.9578737430716,
-				"y": -200.6688128031224
+				"x": 2373.7490323774655,
+				"y": -246.68024486597767
 			},
 			"data": {
 				"id": "logNode-19b10cd4-e5a9-41c3-a3b4-7c224e326af4",
@@ -1068,6 +1068,39 @@
 					"logMessage": "",
 					"logLevel": "",
 					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false,
+			"dragging": false
+		},
+		{
+			"id": "assignmentNode-ddb4984c-35db-481c-b887-46f2ac9852fc",
+			"type": "assignmentNode",
+			"position": {
+				"x": 2623.7490323774655,
+				"y": -246.68024486597767
+			},
+			"data": {
+				"id": "assignmentNode-ddb4984c-35db-481c-b887-46f2ac9852fc",
+				"type": "assignmentNode",
+				"position": {
+					"x": 2623.7490323774655,
+					"y": -246.68024486597767
+				},
+				"previousNodeId": "logNode-19b10cd4-e5a9-41c3-a3b4-7c224e326af4",
+				"agamaData": {
+					"assignments": [],
+					"nodeIcon": "material-symbols:equal",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
@@ -1613,6 +1646,25 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-c2b6bea1-11e6-4947-87c6-0ac39c014d92_continue"
+		},
+		{
+			"id": "logNode-19b10cd4-e5a9-41c3-a3b4-7c224e326af4-assignmentNode-ddb4984c-35db-481c-b887-46f2ac9852fc",
+			"type": "default",
+			"source": "logNode-19b10cd4-e5a9-41c3-a3b4-7c224e326af4",
+			"target": "assignmentNode-ddb4984c-35db-481c-b887-46f2ac9852fc",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-19b10cd4-e5a9-41c3-a3b4-7c224e326af4"
 		}
 	],
 	"viewport": {
