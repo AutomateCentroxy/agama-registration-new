@@ -1249,13 +1249,13 @@
 				"previousNodeId": "whenNode-05bdc967-8266-4fbc-a1f5-69ba37e1f364",
 				"branching": "continue",
 				"agamaData": {
-					"logMessage": "",
-					"logLevel": "",
+					"logMessage": "\"User already exists\"",
+					"logLevel": "error",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "User already exists",
 					"hasComment": true,
 					"comment": ""
 				}
@@ -1283,12 +1283,18 @@
 				},
 				"previousNodeId": "logNode-bddd53ca-5436-4b35-b1d6-2d935aabd492",
 				"agamaData": {
-					"assignments": [],
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "\"The User already Exist.\"",
+							"assignedVariableName": "uiFeedback.errorMessage"
+						}
+					],
 					"nodeIcon": "material-symbols:equal",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "Provide feedback",
 					"hasComment": true,
 					"comment": ""
 				}
@@ -1296,7 +1302,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false
 		}
 	],
 	"edges": [
@@ -1928,8 +1935,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2207.238864465018,
-		"y": 325.6058615378045,
+		"x": -2277.238864465018,
+		"y": 284.6058615378045,
 		"zoom": 1.0139594797900289
 	}
 }
