@@ -45,7 +45,7 @@ Repeat 6 times max
                resendHasSucceed = Call regService sendSmsOtp phone
                When 
                     Log "@ " __________
-               Log "@ " __________
+               Log "@info New OTP code send successfully!" resendHasSucceed
           //  Maximum attempts reached. OTP validation failed!
           Log "@error Maximum attempts reached. OTP validation failed!"
           // OTP validation has failed.
@@ -56,5 +56,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_vwpkf = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_vwpkf
+it_epxsb = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_epxsb
