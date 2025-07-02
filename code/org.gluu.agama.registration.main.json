@@ -856,7 +856,14 @@
 					"variableField": "",
 					"valueField": "",
 					"conditionInputField": "",
-					"conditions": [],
+					"conditions": [
+						{
+							"variable": "resendHasSucceed",
+							"operator": "is",
+							"dataValue": "null",
+							"combinator": "none"
+						}
+					],
 					"nodeIcon": "ph:swap",
 					"nodeColor": "",
 					"titleColor": "",
@@ -870,7 +877,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1127,7 +1134,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "callNode-c49eb53f-006d-47b8-833f-7670ac365753",
@@ -1739,8 +1746,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1814,
-		"y": 518,
+		"x": -1852,
+		"y": 667,
 		"zoom": 1
 	}
 }
