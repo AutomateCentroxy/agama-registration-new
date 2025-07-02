@@ -217,7 +217,7 @@ public class JansUserRegistration extends UserRegistration {
         smsOtpStore.put(phone, otp);
     }
 
-    private boolean sendTwilioSms(String phoneNumber, String message, Map<String, String> conf) {
+    private boolean sendTwilioSms(String userName, String phoneNumber, String message, Map<String, String> conf) {
         try {
             String ACCOUNT_SID = conf.get("ACCOUNT_SID");
             String AUTH_TOKEN = conf.get("AUTH_TOKEN");
@@ -229,9 +229,13 @@ public class JansUserRegistration extends UserRegistration {
 
             com.twilio.rest.api.v2010.account.Message.creator(to, from, message).create();
 
+            Message.creator(TO_NUMBER, FROM_NUMBER, message).create();
+            
+            logger.info("OTP code has been successfully send to {} on phone number {} .", userName, phone);
+
             return true;
         } catch (Exception e) {
-            LogUtils.log("Failed to send SMS to %: %", phoneNumber, e.getMessage());
+            LogUtils.log("Failed to send SMS to %: %",userName, phoneNumber, e.getMessage());
             return false;
         }
     }
