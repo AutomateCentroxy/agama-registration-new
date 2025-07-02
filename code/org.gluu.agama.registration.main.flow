@@ -5,6 +5,7 @@ Flow org.gluu.agama.registration.main
      Configs conf
 // Declare a variable for UI feedback messages.
 uiFeedback = {}
+userInput = {}
 // Iterate x times max
 Repeat 6 times max
      // Retrieve user profile from UI
@@ -54,5 +55,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_geixr = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_geixr
+it_jewnl = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_jewnl
