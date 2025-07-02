@@ -39,6 +39,8 @@ Repeat 6 times max
                          Call __________#__________ 
                     // The maximum number of attempt has been reached.
                     Log "@error Invalid code provided. Number of attempt(s): " idx[0]
+                    // Provide feedback to user.
+                    uiFeedback.errorMessage = "The provided code is not valid."
                // Log new code request
                Log "@info User has requested a new code."
                // Resend OTP code to user
@@ -60,5 +62,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_igwqu = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_igwqu
+it_ikwgx = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_ikwgx
