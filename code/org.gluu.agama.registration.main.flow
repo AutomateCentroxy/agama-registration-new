@@ -27,14 +27,15 @@ Repeat 6 times max
      When isUsernamePolicyMatch is true
           // Try collecting the OTP code from the UI for maximum x(3) times.
           y = Repeat 3 times max
-               RRF "__________" 
-          Log "@ " __________
-          Finish __________
+               // Show UI to collect OTP code from user.
+               smsInput = RRF "verifysms.ftlh" uiFeedback
+          //  Maximum attempts reached. OTP validation failed!
+          Log "@error Maximum attempts reached. OTP validation failed!"
      Otherwise
           // Name should contain only alphabets
           uiFeedback.errorMessage = "Name should contain only alphabets"
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_vlkbf = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_vlkbf
+it_hiwzq = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_hiwzq
