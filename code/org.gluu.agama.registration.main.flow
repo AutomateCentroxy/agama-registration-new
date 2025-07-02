@@ -25,35 +25,11 @@ Repeat 6 times max
      isUsernamePolicyMatch = Call regService usernamePolicyMatch userName
      // if username policy match
      When isUsernamePolicyMatch is true
-          // Try collecting the OTP code from the UI for maximum x(3) times.
-          y = Repeat 3 times max
-          // Send SMS OTP to user's mobile and get masked version for UI feedback
-          maskedPhone = Call regService sendSmsOtp phone
-          Log "@info Sent OTP to phone "
-          smsInput = RRF "verifysms.ftlh" uiFeedback
-          // Validate the OTP code provided by the user.
-          smsOtpOk = Call regService validateSmsOtp phone smsInput.code
-          // check sms otp is valid or not.
-          When smsOtpOk is false
-               // Check if User Exists
-               userExists = Call regService checkIfUserExists userName email
-               // When userExists is true
-               When userExists is true
-                    // Password Input Page
-                    pwdInput = RRF "password.ftlh" uiFeedback
-                    // Prompt user to enter and confirm password, validate both match and policy compliance.
-                    passwordAttempts = Repeat 2 times max
-                         pwdMatch = Call regService matchPasswords pwdInput.userPassword pwdInput.confirmPassword
-                    // Password validation failed
-                    Log "@error Password validation failed"
-               Log "@error uiFeedback.errorMessage = User already exists"
-          // Invalid SMS OTP
-          Log "@error uiFeedback.errorMessage = Invalid SMS OTP"
      Otherwise
           // Name should contain only alphabets
           uiFeedback.errorMessage = "Name should contain only alphabets"
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_wxspw = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_wxspw
+it_lffuy = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_lffuy
