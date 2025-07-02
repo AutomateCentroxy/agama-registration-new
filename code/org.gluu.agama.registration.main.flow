@@ -43,7 +43,7 @@ Repeat 6 times max
                // Resend OTP code to user
                resendHasSucceed = Call regService sendSmsOtp phone
                When 
-                    Log "@ " __________
+                    Log "@info Fail to resend new code to user. " resendHasSucceed
                Log "@info New OTP code send successfully!" resendHasSucceed
                // Provide feedback about the error message to user.
                uiFeedback.infoMessage = "A new OTP code has been send to you on your mobile phone."
@@ -57,5 +57,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_dymje = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_dymje
+it_nomrj = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_nomrj
