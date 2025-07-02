@@ -42,9 +42,6 @@ Repeat 6 times max
                          When UserExists is true
                               pwdInput = RRF "password.ftlh" uiFeedback
                          Log "@error User already exists"
-                         // User already exits
-                         it_turcd = {success:false, error: ""uiFeedback.errorMessage:User already exists""}
-                         Finish it_turcd
                     // The maximum number of attempt has been reached.
                     Log "@error Invalid code provided. Number of attempt(s): " idx[0]
                     // Provide feedback to user.
@@ -70,5 +67,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_bypsd = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_bypsd
+it_nopdz = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_nopdz
