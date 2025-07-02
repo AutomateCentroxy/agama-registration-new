@@ -12,12 +12,14 @@
   
 	<h2>Step 2: Verify SMS OTP
 	</h2>
+	
 	[#if errorMessage??]
 	<p id="isxz">${errorMessage}
 	</p>
+	
 	[/#if]
 	[#if infoMessage??]
-	<p style="color:red">${errorMessage}
+	<p id="i5hx8">${errorMessage}
 	</p>
 	[/#if]
 	<form method="post">
