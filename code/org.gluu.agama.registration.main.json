@@ -478,6 +478,41 @@
 			},
 			"selected": false,
 			"dragging": false
+		},
+		{
+			"id": "repeatNode-d0bd3764-12e8-4686-bc69-82033f6f5c75",
+			"type": "repeatNode",
+			"position": {
+				"x": 636.7711357914808,
+				"y": -764.395182618859
+			},
+			"data": {
+				"id": "repeatNode-d0bd3764-12e8-4686-bc69-82033f6f5c75",
+				"type": "repeatNode",
+				"position": {
+					"x": 770.7711357914808,
+					"y": -732.395182618859
+				},
+				"previousNodeId": "whenNode-2cdd693f-564f-484d-9c50-ee74e922d4f1",
+				"branching": "success",
+				"agamaData": {
+					"nodeIcon": "material-symbols:event-repeat-outline-rounded",
+					"maxIteration": "3",
+					"maxIterationVariableName": "y",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "OTP validation loop",
+					"hasComment": true,
+					"comment": "Try collecting the OTP code from the UI for maximum x(3) times."
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -688,11 +723,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-2cdd693f-564f-484d-9c50-ee74e922d4f1_otherwise"
+		},
+		{
+			"id": "whenNode-2cdd693f-564f-484d-9c50-ee74e922d4f1-repeatNode-d0bd3764-12e8-4686-bc69-82033f6f5c75",
+			"type": "default",
+			"source": "whenNode-2cdd693f-564f-484d-9c50-ee74e922d4f1",
+			"target": "repeatNode-d0bd3764-12e8-4686-bc69-82033f6f5c75",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "Condition met",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-2cdd693f-564f-484d-9c50-ee74e922d4f1_success"
 		}
 	],
 	"viewport": {
-		"x": 16.490118993205897,
-		"y": 1328.7684899823457,
-		"zoom": 1.161508731925722
+		"x": 154.68482178207717,
+		"y": 1197.6757662417947,
+		"zoom": 1
 	}
 }
