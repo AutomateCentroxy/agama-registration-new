@@ -543,10 +543,10 @@
 				}
 			},
 			"measured": {
-				"width": 168,
-				"height": 120
+				"width": 170,
+				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "rrfNode-3f47759a-27dc-4c88-8dce-e03e8542614b",
@@ -567,20 +567,22 @@
 				"agamaData": {
 					"assignments": [],
 					"nodeIcon": "ph:globe-simple",
-					"templatePath": "",
-					"asssignedVariableName": "",
+					"templatePath": "verifysms.ftlh",
+					"asssignedVariableName": "smsInput",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "Collect User SMS OTP Code",
 					"hasComment": true,
-					"comment": ""
+					"comment": "Show UI to collect OTP code from user.",
+					"arguments": "uiFeedback"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -851,8 +853,8 @@
 		}
 	],
 	"viewport": {
-		"x": -444.7994404436258,
-		"y": 1018.4348945892825,
-		"zoom": 0.9999999999999997
+		"x": -683.4383139026049,
+		"y": 892.2953741967862,
+		"zoom": 1.1518876423493574
 	}
 }
