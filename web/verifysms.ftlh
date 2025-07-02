@@ -1,36 +1,30 @@
 [#ftl output_format="HTML"]
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><title>Verify SMS OTP
-	</title></head>
+<head><meta charset="UTF-8"><title>Verify SMS OTP</title></head>
 <body>
 
-  
-	
-	
-  
-  
-	<h2>Step 2: Verify SMS OTP
-	</h2>
-	
-	[#if errorMessage??]
-	<p id="isxz">${errorMessage}
-	</p>
-	
-	[/#if]
-	[#if infoMessage??]
-	<p id="i5hx8">${errorMessage}
-	</p>
-	[/#if]
-	<form method="post">
-	  <label>Enter the OTP sent to your phone:</label>
-	  <br>
-	  <input type="text" name="code" required="">
-	  <br>
-	  <br>
-	  <button type="submit">Verify</button>
-	</form>
-  
+
+    
+    
+
+
+    <h2>Step 2: Verify SMS OTP</h2>
+
+    [#if errorMessage??]
+        <p id="error" style="color:red;">${errorMessage}</p>
+    [/#if]
+
+    [#if infoMessage??]
+        <p id="info" style="color:green;">${infoMessage}</p>
+    [/#if]
+
+    <form method="post">
+        <label for="otpCode">Enter the OTP sent to your phone:</label><br>
+        <input type="text" id="otpCode" name="code" required=""><br><br>
+        <button type="submit">Verify</button>
+    </form>
+
 </body>
 
 
