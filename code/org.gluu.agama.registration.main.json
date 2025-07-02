@@ -944,7 +944,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -964,22 +964,22 @@
 				"previousNodeId": "whenNode-26502843-2e77-41f7-9b09-a1fd9270f2d3",
 				"branching": "success",
 				"agamaData": {
-					"logMessage": "",
-					"logLevel": "",
+					"logMessage": "\"Fail to resend new code to user. \" resendHasSucceed",
+					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "Log error code",
 					"hasComment": true,
 					"comment": ""
 				}
 			},
 			"measured": {
-				"width": 168,
-				"height": 120
+				"width": 170,
+				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1725,8 +1725,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1778.5429141798154,
-		"y": 715.6088432967495,
-		"zoom": 0.9999999999999988
+		"x": -2791.3198770823615,
+		"y": 925.51283328529,
+		"zoom": 1.3453672085218258
 	}
 }
