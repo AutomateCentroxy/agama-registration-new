@@ -36,7 +36,7 @@ Repeat 6 times max
                     // Add log entry withvalidation result in log file.
                     Log "@info OTP validation result is:" otpValidationResult
                     // If otp validation was successful
-                    When otpValidationResult is null
+                    When otpValidationResult is true
                          Call __________#__________ 
                     // The maximum number of attempt has been reached.
                     Log "@error Invalid code provided. Number of attempt(s): " idx[0]
@@ -63,5 +63,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_cbmzs = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_cbmzs
+it_wbsea = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_wbsea
