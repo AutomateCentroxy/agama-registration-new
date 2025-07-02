@@ -41,7 +41,9 @@ Repeat 6 times max
                          UserExists = Call regService checkIfUserExists userName email
                          When UserExists is true
                          Log "@error User already exists"
-                         uiFeedback.errorMessage = "The User already Exist."
+                         // User already exits
+                         it_wiwki = {success:false, error: ""uiFeedback.errorMessage:User already exists""}
+                         Finish it_wiwki
                     // The maximum number of attempt has been reached.
                     Log "@error Invalid code provided. Number of attempt(s): " idx[0]
                     // Provide feedback to user.
@@ -67,5 +69,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_ibnuy = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_ibnuy
+it_tebre = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_tebre
