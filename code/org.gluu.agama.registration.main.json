@@ -1268,40 +1268,6 @@
 			"dragging": false
 		},
 		{
-			"id": "finishNode-6f0c2496-0494-4ebb-bf81-05887821a460",
-			"type": "finishNode",
-			"position": {
-				"x": 3087.094516584629,
-				"y": -35.5701744335055
-			},
-			"data": {
-				"id": "finishNode-6f0c2496-0494-4ebb-bf81-05887821a460",
-				"type": "finishNode",
-				"position": {
-					"x": 3087.094516584629,
-					"y": -35.5701744335055
-				},
-				"previousNodeId": "logNode-bddd53ca-5436-4b35-b1d6-2d935aabd492",
-				"agamaData": {
-					"nodeColor": "",
-					"titleColor": "",
-					"descColor": "",
-					"displayName": "UserExists",
-					"hasComment": true,
-					"comment": "User already exits",
-					"flowfilename": "",
-					"returnVariable": "\"uiFeedback.errorMessage:User already exists\"",
-					"finishMode": "withFailure",
-					"nodeIcon": "material-symbols:line-end-square-rounded"
-				}
-			},
-			"measured": {
-				"width": 170,
-				"height": 124
-			},
-			"selected": false
-		},
-		{
 			"id": "rrfNode-b58ff90e-8332-4699-874b-aeb1826ec01d",
 			"type": "rrfNode",
 			"position": {
@@ -1335,7 +1301,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -1947,25 +1913,6 @@
 			"sourceHandle": "source_whenNode-05bdc967-8266-4fbc-a1f5-69ba37e1f364_continue"
 		},
 		{
-			"id": "logNode-bddd53ca-5436-4b35-b1d6-2d935aabd492-finishNode-6f0c2496-0494-4ebb-bf81-05887821a460",
-			"type": "default",
-			"source": "logNode-bddd53ca-5436-4b35-b1d6-2d935aabd492",
-			"target": "finishNode-6f0c2496-0494-4ebb-bf81-05887821a460",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_logNode-bddd53ca-5436-4b35-b1d6-2d935aabd492"
-		},
-		{
 			"id": "whenNode-05bdc967-8266-4fbc-a1f5-69ba37e1f364-rrfNode-b58ff90e-8332-4699-874b-aeb1826ec01d",
 			"type": "default",
 			"source": "whenNode-05bdc967-8266-4fbc-a1f5-69ba37e1f364",
@@ -1986,8 +1933,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3585.3303536157982,
-		"y": 5.217723318093249,
-		"zoom": 1.3453672085218251
+		"x": -3087.9168005029464,
+		"y": 162.94435539336166,
+		"zoom": 1.1679673946131168
 	}
 }
