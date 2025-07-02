@@ -1050,7 +1050,7 @@
 						{
 							"variable": "otpValidationResult",
 							"operator": "is",
-							"dataValue": "null",
+							"dataValue": "true",
 							"combinator": "none"
 						}
 					],
