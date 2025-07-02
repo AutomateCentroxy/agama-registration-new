@@ -1268,42 +1268,38 @@
 			"dragging": false
 		},
 		{
-			"id": "assignmentNode-c8265b30-5dab-441c-97a0-c45dbb0914a0",
-			"type": "assignmentNode",
+			"id": "finishNode-6f0c2496-0494-4ebb-bf81-05887821a460",
+			"type": "finishNode",
 			"position": {
 				"x": 3087.094516584629,
 				"y": -35.5701744335055
 			},
 			"data": {
-				"id": "assignmentNode-c8265b30-5dab-441c-97a0-c45dbb0914a0",
-				"type": "assignmentNode",
+				"id": "finishNode-6f0c2496-0494-4ebb-bf81-05887821a460",
+				"type": "finishNode",
 				"position": {
 					"x": 3087.094516584629,
 					"y": -35.5701744335055
 				},
 				"previousNodeId": "logNode-bddd53ca-5436-4b35-b1d6-2d935aabd492",
 				"agamaData": {
-					"assignments": [
-						{
-							"variableTypeCheck": true,
-							"assignmentExpression": "\"The User already Exist.\"",
-							"assignedVariableName": "uiFeedback.errorMessage"
-						}
-					],
-					"nodeIcon": "material-symbols:equal",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "Provide feedback",
+					"displayName": "UserExists",
 					"hasComment": true,
-					"comment": ""
+					"comment": "User already exits",
+					"flowfilename": "",
+					"returnVariable": "\"uiFeedback.errorMessage:User already exists\"",
+					"finishMode": "withFailure",
+					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		}
 	],
 	"edges": [
@@ -1915,10 +1911,10 @@
 			"sourceHandle": "source_whenNode-05bdc967-8266-4fbc-a1f5-69ba37e1f364_continue"
 		},
 		{
-			"id": "logNode-bddd53ca-5436-4b35-b1d6-2d935aabd492-assignmentNode-c8265b30-5dab-441c-97a0-c45dbb0914a0",
+			"id": "logNode-bddd53ca-5436-4b35-b1d6-2d935aabd492-finishNode-6f0c2496-0494-4ebb-bf81-05887821a460",
 			"type": "default",
 			"source": "logNode-bddd53ca-5436-4b35-b1d6-2d935aabd492",
-			"target": "assignmentNode-c8265b30-5dab-441c-97a0-c45dbb0914a0",
+			"target": "finishNode-6f0c2496-0494-4ebb-bf81-05887821a460",
 			"labelBgPadding": [
 				8,
 				4
@@ -1935,8 +1931,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2277.238864465018,
-		"y": 284.6058615378045,
-		"zoom": 1.0139594797900289
+		"x": -2309.523738145336,
+		"y": 265.96188712965045,
+		"zoom": 1.0139594797900284
 	}
 }
