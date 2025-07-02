@@ -1067,7 +1067,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1161,24 +1161,29 @@
 				"branching": "success",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "",
-					"javaVariableName": "",
+					"javaMethodName": "checkIfUserExists",
+					"javaVariableName": "regService",
 					"exceptionVariableField": "",
-					"callType": "Call static method",
-					"arguments": [],
+					"callType": "Call method on instance",
+					"arguments": [
+						"userName",
+						"email"
+					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "UserExistsCheck",
 					"hasComment": true,
-					"comment": ""
+					"comment": "Check if users exists funcation call",
+					"asssignedVariableName": "UserExists"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -1753,8 +1758,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1852,
-		"y": 667,
-		"zoom": 1
+		"x": -2178.9654998820743,
+		"y": 447.7534516400327,
+		"zoom": 0.9999999999999996
 	}
 }
