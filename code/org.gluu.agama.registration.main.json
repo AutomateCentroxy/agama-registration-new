@@ -5,7 +5,7 @@
 			"type": "startNode",
 			"sourcePosition": "right",
 			"position": {
-				"x": -1519.0673410189847,
+				"x": -1518.0673410189847,
 				"y": -1184.3866338758262
 			},
 			"deletable": false,
@@ -19,7 +19,7 @@
 				"agamaData": {
 					"isTopLevelFlow": true,
 					"basepath": "",
-					"configParams": "{\n  \"ACCOUNT_SID\": \"PUT_YOUR_TWILIO_ACCOUNT_SID_HERE\",\n  \"AUTH_TOKEN\": \"PUT_YOUR_TWILIO_AUTH_TOKEN_HERE\",\n  \"FROM_NUMBER\": \"PUT_YOUR_TWILIO_FROM_NUMBER_HERE\"\n}",
+					"configParams": "{\n  \"ACCOUNT_SID\": \"env:TWILIO_ACCOUNT_SID\",\n  \"AUTH_TOKEN\": \"env:TWILIO_AUTH_TOKEN\",\n  \"FROM_NUMBER\": \"env:TWILIO_FROM_NUMBER\"\n}",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "360",
 					"inputs": "",
@@ -35,7 +35,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1309,7 +1309,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -2050,8 +2050,8 @@
 		}
 	],
 	"viewport": {
-		"x": -317.8632981597515,
-		"y": 779.7641312517013,
-		"zoom": 0.860949188338904
+		"x": 1436.742805444847,
+		"y": 1203.6182615605858,
+		"zoom": 0.7412335049014176
 	}
 }
