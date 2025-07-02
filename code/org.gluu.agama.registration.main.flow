@@ -45,7 +45,7 @@ Repeat 6 times max
                Log "@info User has requested a new code."
                // Resend OTP code to user
                resendHasSucceed = Call regService sendSmsOtp phone
-               When 
+               When resendHasSucceed is null
                     Log "@info Fail to resend new code to user. " resendHasSucceed
                     // Provide feedback about the otp resend error to user.
                     uiFeedback.infoMessage = "Error occurs while sending new code to you. Please contact site administrator."
@@ -62,5 +62,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_ikwgx = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_ikwgx
+it_ppblj = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_ppblj
