@@ -42,11 +42,13 @@ Repeat 6 times max
                resendHasSucceed = Call regService sendSmsOtp phone
           //  Maximum attempts reached. OTP validation failed!
           Log "@error Maximum attempts reached. OTP validation failed!"
+          // OTP validation has failed.
+          Finish otpValidationResult
      Otherwise
           // Name should contain only alphabets
           uiFeedback.errorMessage = "Name should contain only alphabets"
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_nzgzu = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_nzgzu
+it_ylbwq = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_ylbwq
