@@ -27,11 +27,12 @@ Repeat 6 times max
      When isUsernamePolicyMatch is true
           // Try collecting the OTP code from the UI for maximum x(3) times.
           y = Repeat 3 times max
+          Log "@ " __________
      Otherwise
           // Name should contain only alphabets
           uiFeedback.errorMessage = "Name should contain only alphabets"
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_ktnys = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_ktnys
+it_nlidw = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_nlidw
