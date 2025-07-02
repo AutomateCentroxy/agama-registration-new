@@ -63,6 +63,10 @@ public class JansUserRegistration extends UserRegistration {
         return pwd1 != null && pwd1.equals(pwd2);
     }
 
+    public boolean sendSmsOtp(String phoneNumber) {
+        throw new UnsupportedOperationException("Use sendSmsOtp(phoneNumber, conf) instead.");
+    }
+
     public boolean sendSmsOtp(String phoneNumber, Map<String, String> conf) {
         try {
             LogUtils.log("Sending OTP Code via SMS to %.", phoneNumber);
