@@ -49,7 +49,7 @@ Repeat 6 times max
                // Log new code request
                Log "@info User has requested a new code."
                // Resend OTP code to user
-               resendHasSucceed = Call regService sendSmsOtp phone
+               resendHasSucceed = Call regService sendSmsOtp phone conf
                When resendHasSucceed is null
                     Log "@info Fail to resend new code to user. " resendHasSucceed
                     // Provide feedback about the otp resend error to user.
@@ -67,5 +67,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_vvyvw = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_vvyvw
+it_nrwxr = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_nrwxr
