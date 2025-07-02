@@ -29,11 +29,12 @@ Repeat 6 times max
           y = Repeat 3 times max
                RRF "__________" 
           Log "@ " __________
+          Finish __________
      Otherwise
           // Name should contain only alphabets
           uiFeedback.errorMessage = "Name should contain only alphabets"
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_xxmca = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_xxmca
+it_vlkbf = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_vlkbf
