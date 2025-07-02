@@ -710,24 +710,28 @@
 				"previousNodeId": "logNode-0f991fe2-cb39-42a9-8276-cdde25991afe",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "",
-					"javaVariableName": "",
+					"javaMethodName": "sendSmsOtp",
+					"javaVariableName": "regService",
 					"exceptionVariableField": "",
-					"callType": "Call static method",
-					"arguments": [],
+					"callType": "Call method on instance",
+					"arguments": [
+						"phone"
+					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "Resend OTP code ",
 					"hasComment": true,
-					"comment": ""
+					"comment": "Resend OTP code to user",
+					"asssignedVariableName": "resendHasSucceed"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "callNode-e0e070ae-a62e-4980-bba1-eff7dfd8be1c",
@@ -1181,8 +1185,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1029.9169061293285,
-		"y": 709.7076626759081,
-		"zoom": 1.0139594797900289
+		"x": -1832.0890566506423,
+		"y": 759.5685670479832,
+		"zoom": 1.326845140597161
 	}
 }
