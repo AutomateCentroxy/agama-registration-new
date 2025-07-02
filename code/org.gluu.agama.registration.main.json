@@ -731,7 +731,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "callNode-e0e070ae-a62e-4980-bba1-eff7dfd8be1c",
@@ -751,24 +751,29 @@
 				"branching": "success",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "",
-					"javaVariableName": "",
+					"javaMethodName": "validateSmsOtp",
+					"javaVariableName": "regService",
 					"exceptionVariableField": "",
-					"callType": "Call static method",
-					"arguments": [],
+					"callType": "Call method on instance",
+					"arguments": [
+						"phone",
+						"smsInput.code"
+					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "Validate OTP Code",
 					"hasComment": true,
-					"comment": ""
+					"comment": "Validate the OTP code provided by the user.",
+					"asssignedVariableName": "otpValidationResult"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "logNode-338ac320-6a32-4529-a1ac-269fa270602a",
@@ -1185,8 +1190,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1832.0890566506423,
-		"y": 759.5685670479832,
-		"zoom": 1.326845140597161
+		"x": -1808.0273532220176,
+		"y": 749.812757019798,
+		"zoom": 1.3453672085218258
 	}
 }
