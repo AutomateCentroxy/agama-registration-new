@@ -658,6 +658,40 @@
 				"height": 60
 			},
 			"selected": false
+		},
+		{
+			"id": "logNode-0f991fe2-cb39-42a9-8276-cdde25991afe",
+			"type": "logNode",
+			"position": {
+				"x": 1636.771135791481,
+				"y": -514.395182618859
+			},
+			"data": {
+				"id": "logNode-0f991fe2-cb39-42a9-8276-cdde25991afe",
+				"type": "logNode",
+				"position": {
+					"x": 1636.771135791481,
+					"y": -514.395182618859
+				},
+				"previousNodeId": "whenNode-4d8aa952-b199-4884-bea4-afb58c06a14d",
+				"branching": "continue",
+				"agamaData": {
+					"logMessage": "\"User has requested a new code.\"",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Log new code request",
+					"hasComment": true,
+					"comment": "Log new code request"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -963,11 +997,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-a91b5d23-92a2-417f-877a-907f54dbb202"
+		},
+		{
+			"id": "whenNode-4d8aa952-b199-4884-bea4-afb58c06a14d-logNode-0f991fe2-cb39-42a9-8276-cdde25991afe",
+			"type": "default",
+			"source": "whenNode-4d8aa952-b199-4884-bea4-afb58c06a14d",
+			"target": "logNode-0f991fe2-cb39-42a9-8276-cdde25991afe",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "continue",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-4d8aa952-b199-4884-bea4-afb58c06a14d_continue"
 		}
 	],
 	"viewport": {
-		"x": -909.1210960406097,
-		"y": 806.4861803548821,
+		"x": -802.1210960406097,
+		"y": 832.4861803548821,
 		"zoom": 0.9999999999999996
 	}
 }
