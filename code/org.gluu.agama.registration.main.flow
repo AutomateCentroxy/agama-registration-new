@@ -37,6 +37,7 @@ Repeat 6 times max
                     // Add log entry withvalidation result in log file.
                     Log "@info OTP validation result is:" otpValidationResult
                     When 
+                         Call __________#__________ 
                     Log "@ " __________
                // Log new code request
                Log "@info User has requested a new code."
@@ -55,5 +56,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_ywugd = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_ywugd
+it_vwpkf = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_vwpkf
