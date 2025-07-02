@@ -1018,7 +1018,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "whenNode-c2b6bea1-11e6-4947-87c6-0ac39c014d92",
@@ -1073,22 +1073,22 @@
 				"previousNodeId": "whenNode-c2b6bea1-11e6-4947-87c6-0ac39c014d92",
 				"branching": "continue",
 				"agamaData": {
-					"logMessage": "",
-					"logLevel": "",
+					"logMessage": "\"Invalid code provided. Number of attempt(s): \" idx[0]",
+					"logLevel": "error",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "Log invalid code",
 					"hasComment": true,
-					"comment": ""
+					"comment": "The maximum number of attempt has been reached."
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1732,8 +1732,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1766,
-		"y": 640,
+		"x": -1814,
+		"y": 518,
 		"zoom": 1
 	}
 }
