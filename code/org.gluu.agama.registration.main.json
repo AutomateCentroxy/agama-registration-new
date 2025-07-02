@@ -59,6 +59,11 @@
 							"variableTypeCheck": false,
 							"assignmentExpression": "{}",
 							"assignedVariableName": "uiFeedback"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "{}",
+							"assignedVariableName": "userInput"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -1715,7 +1720,7 @@
 	],
 	"viewport": {
 		"x": 1876.0149708247209,
-		"y": 1448.9345493459846,
+		"y": 1447.9345493459846,
 		"zoom": 1.1518876423493567
 	}
 }
