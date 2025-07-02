@@ -74,7 +74,7 @@ public class JansUserRegistration extends UserRegistration {
             String maskedPhone = maskPhone(phoneNumber);
             String otpCode = generateOtpCode(6);
 
-            LogUtils.log("Generated OTP code is %.", otpCode);
+            LogUtils.log("Generated OTP code is: ", otpCode);
 
             String message = "Hi, your OTP Code to complete your registration is: " + otpCode;
             associateOtpWithPhone(phoneNumber, otpCode);
