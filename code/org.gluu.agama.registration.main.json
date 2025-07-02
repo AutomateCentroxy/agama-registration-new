@@ -1299,6 +1299,42 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "rrfNode-b58ff90e-8332-4699-874b-aeb1826ec01d",
+			"type": "rrfNode",
+			"position": {
+				"x": 2839.9846771217635,
+				"y": 223.5811762056913
+			},
+			"data": {
+				"id": "rrfNode-b58ff90e-8332-4699-874b-aeb1826ec01d",
+				"type": "rrfNode",
+				"position": {
+					"x": 2839.9846771217635,
+					"y": 223.5811762056913
+				},
+				"previousNodeId": "whenNode-05bdc967-8266-4fbc-a1f5-69ba37e1f364",
+				"branching": "success",
+				"agamaData": {
+					"assignments": [],
+					"nodeIcon": "ph:globe-simple",
+					"templatePath": "password.ftlh",
+					"asssignedVariableName": "pwdInput",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Password Input page",
+					"hasComment": true,
+					"comment": "",
+					"arguments": "uiFeedback"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		}
 	],
@@ -1928,11 +1964,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-bddd53ca-5436-4b35-b1d6-2d935aabd492"
+		},
+		{
+			"id": "whenNode-05bdc967-8266-4fbc-a1f5-69ba37e1f364-rrfNode-b58ff90e-8332-4699-874b-aeb1826ec01d",
+			"type": "default",
+			"source": "whenNode-05bdc967-8266-4fbc-a1f5-69ba37e1f364",
+			"target": "rrfNode-b58ff90e-8332-4699-874b-aeb1826ec01d",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "Condition met",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-05bdc967-8266-4fbc-a1f5-69ba37e1f364_success"
 		}
 	],
 	"viewport": {
-		"x": -2309.523738145336,
-		"y": 265.96188712965045,
-		"zoom": 1.0139594797900284
+		"x": -3585.3303536157982,
+		"y": 5.217723318093249,
+		"zoom": 1.3453672085218251
 	}
 }
