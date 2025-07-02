@@ -63,7 +63,7 @@ public class JansUserRegistration extends UserRegistration {
         return pwd1 != null && pwd1.equals(pwd2);
     }
 
-    public boolean sendSmsOtp(String phoneNumber) {
+    public boolean sendSmsOtp(String phoneNumber, Map<String, String> conf) {
         try {
             LogUtils.log("Sending OTP Code via SMS to %.", phoneNumber);
 
@@ -75,7 +75,7 @@ public class JansUserRegistration extends UserRegistration {
             String message = "Hi, your OTP Code to complete your registration is: " + otpCode;
             associateOtpWithPhone(phoneNumber, otpCode);
 
-            boolean success = sendTwilioSms(phoneNumber, message);
+            boolean success = sendTwilioSms(phoneNumber, message, conf);
 
             if (success) {
                 LogUtils.log("OTP has been successfully sent to % (masked: %).", phoneNumber, maskedPhone);
