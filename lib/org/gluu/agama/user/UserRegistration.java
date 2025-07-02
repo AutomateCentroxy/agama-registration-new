@@ -19,6 +19,8 @@ public abstract class UserRegistration {
     public abstract boolean sendEmailOtp(String email);
 
     public abstract boolean validateEmailOtp(String email, String otp);
+    
+    public abstract boolean checkIfUserExists(String username, String email);
 
     public static UserRegistration getInstance(){
         return JansUserRegistration.getInstance();
