@@ -6,13 +6,13 @@ import io.jans.orm.exception.operation.EntryNotFoundException;
 import io.jans.service.cdi.util.CdiUtil;
 import io.jans.util.StringHelper;
 import org.gluu.agama.registration.jans.model.ContextData;
-
 import org.gluu.agama.user.UserRegistration;
 import io.jans.agama.engine.script.LogUtils;
 
 import java.security.SecureRandom;
 import java.util.*;
 import java.util.regex.Pattern;
+
 import static org.gluu.agama.registration.jans.Attrs.*;
 
 public class JansUserRegistration extends UserRegistration {
@@ -34,25 +34,23 @@ public class JansUserRegistration extends UserRegistration {
     private final Map<String, String> smsOtpStore = new HashMap<>();
     private final Map<String, String> emailOtpStore = new HashMap<>();
 
-    public JansUserRegistration() {
-    }
+    public JansUserRegistration() {}
 
     public static synchronized JansUserRegistration getInstance() {
-        if (INSTANCE == null)
+        if (INSTANCE == null) {
             INSTANCE = new JansUserRegistration();
+        }
         return INSTANCE;
     }
 
     public boolean passwordPolicyMatch(String userPassword) {
-        String regex = '''^(?=.*[!@#$^&*])[A-Za-z0-9!@#$^&*]{6,}$''';
+        String regex = "^(?=.*[!@#$^&*])[A-Za-z0-9!@#$^&*]{6,}$";
         return Pattern.compile(regex).matcher(userPassword).matches();
     }
 
     public boolean usernamePolicyMatch(String userName) {
-        // Regex: Only alphabets (uppercase and lowercase), minimum 1 character
-        String regex = '''^[A-Za-z]+$''';
-        Pattern pattern = Pattern.compile(regex);
-        return pattern.matcher(userName).matches();
+        String regex = "^[A-Za-z]+$";  // Only alphabets
+        return Pattern.compile(regex).matcher(userName).matches();
     }
 
     public boolean checkIfUserExists(String username, String email) {
@@ -70,11 +68,10 @@ public class JansUserRegistration extends UserRegistration {
     public boolean sendSmsOtp(String phoneNumber, Map<String, String> conf) {
         try {
             LogUtils.log("Sending OTP Code via SMS to %.", phoneNumber);
-
             String maskedPhone = maskPhone(phoneNumber);
             String otpCode = generateOtpCode(6);
 
-            LogUtils.log("Generated OTP code is: ", otpCode);
+            LogUtils.log("Generated OTP code is: %", otpCode);
 
             String message = "Hi, your OTP Code to complete your registration is: " + otpCode;
             associateOtpWithPhone(phoneNumber, otpCode);
@@ -86,6 +83,7 @@ public class JansUserRegistration extends UserRegistration {
             }
 
             return success;
+
         } catch (Exception e) {
             LogUtils.log("Error while sending OTP via SMS to %: %", phoneNumber, e.getMessage());
             return false;
@@ -103,6 +101,7 @@ public class JansUserRegistration extends UserRegistration {
             }
 
             return false;
+
         } catch (Exception e) {
             LogUtils.log("Error validating OTP code % for phone %: %", code, phoneNumber, e.getMessage());
             return false;
@@ -113,7 +112,7 @@ public class JansUserRegistration extends UserRegistration {
         try {
             LogUtils.log("Sending OTP to email: %", email);
 
-            ContextData context = new ContextData(); // You can customize this if needed
+            ContextData context = new ContextData(); // Customize if needed
             String otp = JansEmailService.getInstance().sendEmail(email, context);
 
             if (otp != null) {
@@ -122,6 +121,7 @@ public class JansUserRegistration extends UserRegistration {
             }
 
             return false;
+
         } catch (Exception e) {
             LogUtils.log("Error sending email OTP to %: %", email, e.getMessage());
             return false;
@@ -134,8 +134,7 @@ public class JansUserRegistration extends UserRegistration {
     }
 
     public String addNewUser(Map<String, String> profile) throws Exception {
-        Set<String> attributes = Set.of("uid", "mail", "displayName", "givenName", "sn", "userPassword", PHONE, COUNTRY,
-                REFERRAL);
+        Set<String> attributes = Set.of("uid", "mail", "displayName", "givenName", "sn", "userPassword", PHONE, COUNTRY, REFERRAL);
 
         User user = new User();
         attributes.forEach(attr -> {
@@ -177,18 +176,15 @@ public class JansUserRegistration extends UserRegistration {
         userMap.put(UID, getSingleValuedAttr(user, UID));
         userMap.put(INUM_ATTR, getSingleValuedAttr(user, INUM_ATTR));
         userMap.put("name", Optional.ofNullable(getSingleValuedAttr(user, GIVEN_NAME))
-                .orElseGet(() -> getSingleValuedAttr(user, DISPLAY_NAME)));
+                .orElse(getSingleValuedAttr(user, DISPLAY_NAME)));
         userMap.put("email", Optional.ofNullable(getSingleValuedAttr(user, MAIL)).orElse(fallbackEmail));
 
         return userMap;
     }
 
     private String getSingleValuedAttr(User user, String attribute) {
-        if (user == null)
-            return null;
-        if (attribute.equals(UID)) {
-            return user.getUserId();
-        }
+        if (user == null) return null;
+        if (attribute.equals(UID)) return user.getUserId();
         Object val = user.getAttribute(attribute, true, false);
         return val != null ? val.toString() : null;
     }
@@ -196,11 +192,6 @@ public class JansUserRegistration extends UserRegistration {
     private static User getUser(String attributeName, String value) {
         UserService userService = CdiUtil.bean(UserService.class);
         return userService.getUserByAttribute(attributeName, value, true);
-    }
-
-    private String generateOtp() {
-        int otp = 100000 + RAND.nextInt(900000);
-        return String.valueOf(otp);
     }
 
     private String generateOtpCode(int length) {
@@ -219,17 +210,30 @@ public class JansUserRegistration extends UserRegistration {
 
     private boolean sendTwilioSms(String phoneNumber, String message, Map<String, String> conf) {
         try {
-            String ACCOUNT_SID = conf.get("ACCOUNT_SID");
-            String AUTH_TOKEN = conf.get("AUTH_TOKEN");
-            String FROM_NUMBER = conf.get("FROM_NUMBER");
+            // Fallback credentials — replace with your real credentials
+            String fallbackSid = "REPLACE_WITH_VALID_SID";
+            String fallbackToken = "REPLACE_WITH_VALID_AUTH_TOKEN";
+            String fallbackFrom = "+1234567890"; // REPLACE with your verified Twilio number
+
+            String ACCOUNT_SID = (conf != null && StringHelper.isNotEmpty(conf.get("ACCOUNT_SID")))
+                    ? conf.get("ACCOUNT_SID") : fallbackSid;
+            String AUTH_TOKEN = (conf != null && StringHelper.isNotEmpty(conf.get("AUTH_TOKEN")))
+                    ? conf.get("AUTH_TOKEN") : fallbackToken;
+            String FROM_NUMBER = (conf != null && StringHelper.isNotEmpty(conf.get("FROM_NUMBER")))
+                    ? conf.get("FROM_NUMBER") : fallbackFrom;
+
+            LogUtils.log("Twilio config - SID: %, FROM: %", ACCOUNT_SID, FROM_NUMBER);
 
             com.twilio.Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+
             com.twilio.type.PhoneNumber from = new com.twilio.type.PhoneNumber(FROM_NUMBER);
             com.twilio.type.PhoneNumber to = new com.twilio.type.PhoneNumber(phoneNumber);
 
             com.twilio.rest.api.v2010.account.Message.creator(to, from, message).create();
 
+            LogUtils.log("Twilio SMS sent successfully to % using from number %", phoneNumber, FROM_NUMBER);
             return true;
+
         } catch (Exception e) {
             LogUtils.log("Failed to send SMS to %: %", phoneNumber, e.getMessage());
             return false;
@@ -241,10 +245,4 @@ public class JansUserRegistration extends UserRegistration {
             return "****";
         return "****" + phone.substring(phone.length() - 4);
     }
-
 }
-
-
-
-
-
