@@ -29,6 +29,8 @@ Repeat 6 times max
           y = Repeat 3 times max
                // Show UI to collect OTP code from user.
                smsInput = RRF "verifysms.ftlh" uiFeedback
+               // Add log entry with collected code in log file.
+               Log "@info Information provided by the user is : " smsInput
           //  Maximum attempts reached. OTP validation failed!
           Log "@error Maximum attempts reached. OTP validation failed!"
      Otherwise
@@ -37,5 +39,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_tubng = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_tubng
+it_metqo = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_metqo
