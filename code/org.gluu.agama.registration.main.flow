@@ -32,6 +32,8 @@ Repeat 6 times max
                // Add log entry with collected code in log file.
                Log "@info Information provided by the user is : " smsInput
                When smsInput.hasRequestedNewCode is not "yes"
+                    Call __________#__________ 
+                    Log "@ " __________
                // Log new code request
                Log "@info User has requested a new code."
                Call __________#__________ 
@@ -43,5 +45,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_jfwxy = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_jfwxy
+it_qiktx = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_qiktx
