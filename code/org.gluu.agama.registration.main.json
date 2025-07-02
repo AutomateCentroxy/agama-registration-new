@@ -531,21 +531,22 @@
 				"previousNodeId": "repeatNode-d0bd3764-12e8-4686-bc69-82033f6f5c75",
 				"branching": "continue",
 				"agamaData": {
-					"logMessage": "",
-					"logLevel": "",
+					"logMessage": "\"Maximum attempts reached. OTP validation failed!\"",
+					"logLevel": "error",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "OTP validation failed!",
 					"hasComment": true,
-					"comment": ""
+					"comment": " Maximum attempts reached. OTP validation failed!"
 				}
 			},
 			"measured": {
-				"width": 170,
-				"height": 124
-			}
+				"width": 168,
+				"height": 120
+			},
+			"selected": true
 		},
 		{
 			"id": "rrfNode-3f47759a-27dc-4c88-8dce-e03e8542614b",
@@ -574,38 +575,6 @@
 					"displayName": "",
 					"hasComment": true,
 					"comment": ""
-				}
-			},
-			"measured": {
-				"width": 170,
-				"height": 124
-			}
-		},
-		{
-			"id": "finishNode-d28c96d0-8772-4828-8da1-13d34414b021",
-			"type": "finishNode",
-			"position": {
-				"x": 1136.771135791481,
-				"y": -764.395182618859
-			},
-			"data": {
-				"id": "finishNode-d28c96d0-8772-4828-8da1-13d34414b021",
-				"type": "finishNode",
-				"position": {
-					"x": 1136.771135791481,
-					"y": -764.395182618859
-				},
-				"previousNodeId": "logNode-21f26dc6-cce1-4a85-9b74-b1ee1b2deea3",
-				"agamaData": {
-					"nodeColor": "",
-					"titleColor": "",
-					"descColor": "",
-					"displayName": "",
-					"hasComment": true,
-					"comment": "",
-					"flowfilename": "",
-					"returnVariable": "",
-					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
 			},
 			"measured": {
@@ -879,30 +848,11 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_repeatNode-d0bd3764-12e8-4686-bc69-82033f6f5c75_repeat"
-		},
-		{
-			"id": "logNode-21f26dc6-cce1-4a85-9b74-b1ee1b2deea3-finishNode-d28c96d0-8772-4828-8da1-13d34414b021",
-			"type": "default",
-			"source": "logNode-21f26dc6-cce1-4a85-9b74-b1ee1b2deea3",
-			"target": "finishNode-d28c96d0-8772-4828-8da1-13d34414b021",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_logNode-21f26dc6-cce1-4a85-9b74-b1ee1b2deea3"
 		}
 	],
 	"viewport": {
-		"x": -180.89263858873187,
-		"y": 877.6976263676754,
-		"zoom": 0.8802590135631507
+		"x": -444.7994404436258,
+		"y": 1018.4348945892825,
+		"zoom": 0.9999999999999997
 	}
 }
