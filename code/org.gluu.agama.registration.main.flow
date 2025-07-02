@@ -41,6 +41,7 @@ Repeat 6 times max
                // Resend OTP code to user
                resendHasSucceed = Call regService sendSmsOtp phone
                When 
+                    Log "@ " __________
                Log "@ " __________
           //  Maximum attempts reached. OTP validation failed!
           Log "@error Maximum attempts reached. OTP validation failed!"
@@ -52,5 +53,5 @@ Repeat 6 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_ameez = {success:false, error: "User registration flow reached max attempts try later"}
-Finish it_ameez
+it_moqfk = {success:false, error: "User registration flow reached max attempts try later"}
+Finish it_moqfk
