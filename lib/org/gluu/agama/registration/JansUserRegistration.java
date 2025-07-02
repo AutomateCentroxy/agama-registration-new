@@ -229,7 +229,7 @@ public class JansUserRegistration extends UserRegistration {
 
             com.twilio.rest.api.v2010.account.Message.creator(to, from, message).create();
 
-            Message.creator(TO_NUMBER, FROM_NUMBER, message).create();
+            
             
             logger.info("OTP code has been successfully send to {} on phone number {} .", userName, phone);
 
